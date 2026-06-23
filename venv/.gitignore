@@ -1,0 +1,27 @@
+# Secrets and Credentials
+.env
+
+# Environments and Virtual Envs
+venv/
+ENV/
+env/
+.venv/
+
+# Python Cache and Compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Databases and Local State
+*.db
+*.sqlite3
+test_output.json
+
+# Application Logs
+*.log
+app.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
