@@ -1,0 +1,29 @@
+{
+    "greeting": "Good Afternoon, bluedart",
+    "ai_summary": "<p>I have analyzed the changes since your last visit.</p><p>Overall NPS has improved to <strong>85.15</strong>, reflecting a positive shift of <strong>2 points</strong>. The most significant gain was observed in <strong>TP6 Booking of Package Experience</strong>, which surged by <strong>48.49 points</strong> to an NPS of <strong>66.67</strong>. However, the <strong>SOUTH (Region) - SHX (Location) - GND (Branch)</strong> experienced the steepest decline, dropping <strong>33.33 points</strong> to an NPS of <strong>66.67</strong>.</p><p>Key customer concerns include delivery issues, with multiple reports of packages not reaching customers and poor service interactions. Notably, several verbatims indicate churn risk, especially regarding delivery failures and unresponsive staff. To sustain this positive momentum, addressing these critical issues is essential.</p>",
+    "ai_summary_audio_url": "https://bluedart-ai-popup-qdegrees.com/api/audio/tts_636fbf24e8a14afeabbfd23042df23d5.mp3",
+    "top_alert_VOC": [
+        {
+            "verbatim": "Long waiting and credit card machine not working",
+            "extra_info": "Region:WEST, Zone:PNQ, Branch:PNQ, Agent:SUSHIL SURESH GARSUND"
+        },
+        {
+            "verbatim": "I found the staff not customer friendly",
+            "extra_info": "Region:WEST, Zone:BOM, Branch:ADR, Agent:ASHWINI MALLAPPA KARADE"
+        },
+        {
+            "verbatim": "Was told the  delivery will be  next day but still not delevired",
+            "extra_info": "Region:NORTH, Zone:LCK, Branch:LCK, Agent:ANURAG SHUKLA"
+        },
+        {
+            "verbatim": "Iam  not happy  very urgently and careless   delivery  he not understand what I tell",
+            "extra_info": "Region:SOUTH, Zone:BLR, Branch:CGM, Agent:CONTRACTOR - 90"
+        },
+        {
+            "verbatim": "You lied about wrong address",
+            "extra_info": "Region:SOUTH, Zone:PIF, Branch:EGM, Agent:KANCHANA"
+        }
+    ],
+    "voc_audio_url": "https://bluedart-ai-popup-qdegrees.com/api/audio/tts_e5fe41bb5e4b46f58fcf071303ab6f81.mp3",
+    "is_data_found": 1
+}

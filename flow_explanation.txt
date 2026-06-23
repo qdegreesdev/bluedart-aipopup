@@ -1,0 +1,66 @@
+=# BlueDart Login Intelligence Popup - System Flow Explanation
+
+This document explains the end-to-end flow of the SurveyCXM Login Intelligence Popup API. It details how data is queried from the database, how the AI interprets that data, and how the final summary and audio are generated for the user upon login.
+
+---
+
+## 1. The Trigger: User Logs In
+When a user logs into the application, the frontend makes a POST request to the API endpoint `/api/login-popup-summary`. 
+The frontend provides two crucial pieces of information:
+- `user_last_login_date`: When the user previously logged in.
+- `user_current_login_date`: The current date/time.
+
+## 2. Database Interaction: Fetching the Changes
+The system uses the `DatabaseService` (`database.py`) to fetch data from the MySQL database. 
+
+**Time Window Logic:**
+The system is designed to show "What changed since you were last here." It calculates two time windows:
+1. **Current Period:** From `last_login_date` to `current_login_date`.
+2. **Previous Period:** An equal-length time window immediately *before* the `last_login_date`. This allows for a fair "apples-to-apples" comparison.
+
+**What is queried in parallel:**
+- **Survey IDs:** Finds surveys linked to key touchpoints (6, 7, 8, 9, 10).
+- **Overall NPS Data:** Calculates the current NPS score, previous NPS score, the difference (delta), and the percentage of Promoters/Passives/Detractors.
+- **Demographic Breakdown:** Groups the NPS data by Region, State, and Branch. It calculates the change (delta) for each location to identify the "Top Gainers" (most improved) and "Top Decliners" (worse performing).
+- **Voice of Customer (VOC) Alerts:** Queries the `voc_alerts` table for high-priority negative feedback (NPS <= 6 and marked as critical) submitted in the current period. It grabs exact customer quotes (verbatims) and flags any signs of churn intent.
+- **Touchpoint Comparison:** Compares performance across different surveys/touchpoints to see which step in the customer journey improved or dropped the most.
+
+## 3. AI Processing: Reading & Generating the Summary
+Once the raw data is collected, it is passed to the AI Service (services/ai_service.py).
+
+**How the AI reads the data:**
+The system does *not* send your entire database to the AI. Instead, the backend Python code calculates the metrics (NPS changes, top 3 branches, top 5 critical issues, etc.) and constructs a highly structured text prompt. 
+
+*Example of what the AI actually sees:*
+> "NPS is currently 45 (was 40, +5 points). Top improving area is WEST - BOM - ADR (+12 pts). Top declining area is EAST - CCU (-8 pts). Critical issue: 'Package arrived damaged' (2 churn signals)."
+
+**How the AI generates the output:**
+1. The structured prompt is sent to OpenAI's API.
+2. The AI is instructed via a strict "System Prompt" to act as an executive CX analyst.
+3. It generates a short, punchy narrative wrapped in HTML tags (e.g., `<p>`, `<strong>`), highlighting the overall NPS trend, praising the top gainer, warning about the top decliner, and summarizing the critical customer issues.
+4. The AI returns a JSON object containing the HTML summary, a list of bullet points, and the most critical verbatim quotes.
+5. **Fallback Mechanism:** If the OpenAI API is down or missing a key, the system has a hardcoded Python fallback (`_fallback_summary`) that stitches the numbers into a basic sentence template so the popup still works.
+
+## 4. Audio Generation (Text-to-Speech)
+The generated AI summary text and the top critical customer feedback text are then sent to the TTS Service (`services/tts_service.py`).
+- The text is converted into human-like speech audio files (`.mp3`).
+- These files are saved in the `static/audio/` folder.
+
+## 5. Final Output & Caching
+Finally, the API bundles everything together into a JSON response:
+- A personalized greeting (e.g., "Good Morning, BlueDart").
+- The HTML formatted AI Summary.
+- The URL to play the AI Summary audio.
+- The list of Top Alert VOCs (verbatim quotes and locations).
+- The URL to play the VOC audio.
+
+**Caching:** 
+To prevent the database and AI from being overloaded if the user refreshes the page multiple times, this exact response is saved in the server's memory (`cache_service.py`) for 10 minutes. If the exact same user login request comes in again within 10 minutes, it serves the cached result instantly.
+
+---
+
+## Bonus: The "Ask AI" Flow
+There is a secondary endpoint `/api/ask-ai` which allows the user to type custom questions into the popup.
+1. It runs the exact same database queries to get the current context.
+2. It sends the data context + the user's explicit question to OpenAI.
+3. OpenAI acts as a data analyst to answer the specific question using *only* the real-time data provided in the prompt.

@@ -1,0 +1,313 @@
+2026-06-20 14:24:49.797 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53674 - "POST /api/clear-logs HTTP/1.1" 200
+2026-06-20 14:54:34.266 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-06-20 14:54:34.340 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-20 14:54:34.453 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-20 14:54:34.455 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-20 14:54:34.456 | INFO     | logging:callHandlers:1737 - Finished server process [3872]
+2026-06-20 14:54:42.336 | INFO     | logging:callHandlers:1737 - Started server process [6360]
+2026-06-20 14:54:42.337 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-20 14:54:42.338 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-20 14:54:44.089 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-20 14:54:44.089 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-20 14:54:44.090 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-20 14:55:22.725 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-06-20 14:55:22.742 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-20 14:55:22.845 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-20 14:55:22.846 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-20 14:55:22.846 | INFO     | logging:callHandlers:1737 - Finished server process [6360]
+2026-06-20 14:55:25.992 | INFO     | logging:callHandlers:1737 - Started server process [10940]
+2026-06-20 14:55:25.993 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-20 14:55:25.993 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-20 14:55:26.880 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-20 14:55:26.881 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-20 14:55:26.882 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 10:41:02.532 | WARNING  | services.ai_service:generate_ai_summary:31 - No valid API key — using rule-based summary.
+2026-06-22 10:41:02.545 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_078f752fca76408fbccbeafbe62c986a.mp3
+2026-06-22 10:41:02.545 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_078f752fca76408fbccbeafbe62c986a.mp3
+2026-06-22 10:41:02.548 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_665c4a78e8f64e57ac2d22e6b3a7a5ed.mp3
+2026-06-22 10:41:02.549 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_665c4a78e8f64e57ac2d22e6b3a7a5ed.mp3
+2026-06-22 10:41:02.550 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_8ab57973d865475688c1b336ae2ca39e.mp3
+2026-06-22 10:41:02.551 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_8ab57973d865475688c1b336ae2ca39e.mp3
+2026-06-22 10:41:02.553 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_ef13b917842e4d0c865504faf3df6a66.mp3
+2026-06-22 10:41:02.554 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_ef13b917842e4d0c865504faf3df6a66.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_ef13b917842e4d0c865504faf3df6a66.mp3'
+2026-06-22 10:47:30.966 | INFO     | services.ai_service:generate_ai_summary:127 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 10:49:17.259 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-06-22 10:50:23.839 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-22 10:50:23.840 | INFO     | logging:callHandlers:1737 - Started reloader process [16508] using StatReload
+2026-06-22 10:50:27.007 | INFO     | logging:callHandlers:1737 - Started server process [2828]
+2026-06-22 10:50:27.008 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 10:50:27.008 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 10:50:29.220 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 10:50:29.221 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 10:50:29.222 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 10:50:33.629 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53413 - "GET / HTTP/1.1" 200
+2026-06-22 10:50:33.666 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53413 - "GET /favicon.ico HTTP/1.1" 404
+2026-06-22 10:50:38.178 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53413 - "GET /docs HTTP/1.1" 200
+2026-06-22 10:50:39.452 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53413 - "GET /openapi.json HTTP/1.1" 200
+2026-06-22 10:51:09.826 | INFO     | services.ai_service:generate_ai_summary:127 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 10:52:35.361 | INFO     | services.ai_service:generate_ai_summary:127 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 10:52:52.212 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53418 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-22 10:52:58.257 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-06-22 10:57:29.974 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-06-22 10:57:48.682 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53840 - "POST /api/ask-ai HTTP/1.1" 200
+2026-06-22 10:59:31.943 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'test_popup.py'. Reloading...
+2026-06-22 10:59:31.994 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-22 10:59:32.099 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-22 10:59:32.100 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-22 10:59:32.101 | INFO     | logging:callHandlers:1737 - Finished server process [2828]
+2026-06-22 10:59:35.751 | INFO     | logging:callHandlers:1737 - Started server process [4480]
+2026-06-22 10:59:35.752 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 10:59:35.753 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 10:59:36.627 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 10:59:36.628 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 10:59:36.629 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 11:01:32.168 | INFO     | services.ai_service:generate_ai_summary:127 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 11:03:11.270 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-06-22 11:09:32.133 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'config.py'. Reloading...
+2026-06-22 11:09:32.225 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-22 11:09:32.327 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-22 11:09:32.328 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-22 11:09:32.329 | INFO     | logging:callHandlers:1737 - Finished server process [4480]
+2026-06-22 11:09:35.120 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-06-22 11:09:36.393 | INFO     | logging:callHandlers:1737 - Started server process [1712]
+2026-06-22 11:09:36.395 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 11:09:36.396 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 11:09:37.223 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 11:09:37.223 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 11:09:37.224 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 11:09:37.225 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-22 11:09:37.335 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-22 11:09:37.336 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-22 11:09:37.336 | INFO     | logging:callHandlers:1737 - Finished server process [1712]
+2026-06-22 11:09:40.980 | INFO     | logging:callHandlers:1737 - Started server process [4796]
+2026-06-22 11:09:40.981 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 11:09:40.982 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 11:09:41.810 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 11:09:41.811 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 11:09:41.812 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 11:11:32.935 | INFO     | services.ai_service:generate_ai_summary:127 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 11:11:43.923 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_a286659ee7fb4beabe17b2590624ece8.mp3
+2026-06-22 11:11:43.924 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_a286659ee7fb4beabe17b2590624ece8.mp3
+2026-06-22 11:11:43.925 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_e76e7d7cd29240ee843e2f8055efdfce.mp3
+2026-06-22 11:11:43.926 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_e76e7d7cd29240ee843e2f8055efdfce.mp3
+2026-06-22 11:13:16.747 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-06-22 11:13:59.030 | INFO     | services.ai_service:generate_ai_summary:127 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 11:15:58.040 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-06-22 14:28:17.858 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-22 14:28:17.859 | INFO     | logging:callHandlers:1737 - Started reloader process [3504] using StatReload
+2026-06-22 14:28:21.557 | INFO     | logging:callHandlers:1737 - Started server process [8888]
+2026-06-22 14:28:21.558 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 14:28:21.559 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 14:28:22.404 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 14:28:22.404 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 14:28:22.405 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 14:28:31.949 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56866 - "GET / HTTP/1.1" 200
+2026-06-22 14:28:31.997 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56866 - "GET /favicon.ico HTTP/1.1" 404
+2026-06-22 14:28:38.209 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56867 - "GET /docs HTTP/1.1" 200
+2026-06-22 14:28:38.650 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56867 - "GET /openapi.json HTTP/1.1" 200
+2026-06-22 14:28:40.795 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56867 - "GET /docs HTTP/1.1" 200
+2026-06-22 14:28:41.004 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56867 - "GET /openapi.json HTTP/1.1" 200
+2026-06-22 14:30:05.733 | INFO     | services.ai_service:generate_ai_summary:127 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 14:30:16.100 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_0a650ca91a094a4f97a2cc52c5c9418a.mp3
+2026-06-22 14:30:16.101 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_0fff0d18588a43f899d05ab51525f99b.mp3
+2026-06-22 14:30:16.102 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_1a51fe3bcd874f27b4767ce00de68a68.mp3
+2026-06-22 14:30:16.103 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_1a51fe3bcd874f27b4767ce00de68a68.mp3: [WinError 2] The system cannot find the file specified: 'static\\audio\\tts_1a51fe3bcd874f27b4767ce00de68a68.mp3'
+2026-06-22 14:30:16.105 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_297012a775124a3b8184eccfbe1ea244.mp3
+2026-06-22 14:30:16.105 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_297012a775124a3b8184eccfbe1ea244.mp3: [WinError 2] The system cannot find the file specified: 'static\\audio\\tts_297012a775124a3b8184eccfbe1ea244.mp3'
+2026-06-22 14:30:16.107 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_408b620f522a465aafd09bd17e69f788.mp3
+2026-06-22 14:30:16.107 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_408b620f522a465aafd09bd17e69f788.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_408b620f522a465aafd09bd17e69f788.mp3'
+2026-06-22 14:30:16.109 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_56ec8b1a40954f27bef95240297047d4.mp3
+2026-06-22 14:30:16.109 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_56ec8b1a40954f27bef95240297047d4.mp3: [WinError 2] The system cannot find the file specified: 'static\\audio\\tts_56ec8b1a40954f27bef95240297047d4.mp3'
+2026-06-22 14:30:16.110 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_57e829c034ab43d7afec744e5770427a.mp3
+2026-06-22 14:30:16.110 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_57e829c034ab43d7afec744e5770427a.mp3: [WinError 2] The system cannot find the file specified: 'static\\audio\\tts_57e829c034ab43d7afec744e5770427a.mp3'
+2026-06-22 14:30:16.112 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_69ccae610d4f4087a49c766066d9cec2.mp3
+2026-06-22 14:30:16.113 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_6bf3f385bb0c43e7ad85038dfec295da.mp3
+2026-06-22 14:30:16.114 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_6bf3f385bb0c43e7ad85038dfec295da.mp3
+2026-06-22 14:30:16.115 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_98ddf713dd144719867daf82d089e385.mp3
+2026-06-22 14:30:16.115 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_98ddf713dd144719867daf82d089e385.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_98ddf713dd144719867daf82d089e385.mp3'
+2026-06-22 14:30:16.117 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_da3e30fbbef24dd2825bcc20f811c6c5.mp3
+2026-06-22 14:30:16.117 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_da3e30fbbef24dd2825bcc20f811c6c5.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_da3e30fbbef24dd2825bcc20f811c6c5.mp3'
+2026-06-22 14:30:16.118 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_e18cd1d6fba74d018b04bbd186602f6b.mp3
+2026-06-22 14:30:16.119 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_e18cd1d6fba74d018b04bbd186602f6b.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_e18cd1d6fba74d018b04bbd186602f6b.mp3'
+2026-06-22 14:30:22.668 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56877 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-22 14:34:20.896 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-22 14:34:21.003 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-22 14:34:21.004 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-22 14:34:21.006 | INFO     | logging:callHandlers:1737 - Finished server process [8888]
+2026-06-22 14:34:21.382 | INFO     | logging:callHandlers:1737 - Stopping reloader process [3504]
+2026-06-22 17:44:13.613 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-22 17:44:13.614 | INFO     | logging:callHandlers:1737 - Started reloader process [23272] using StatReload
+2026-06-22 17:44:17.675 | INFO     | logging:callHandlers:1737 - Started server process [6884]
+2026-06-22 17:44:17.675 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 17:44:17.676 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 17:44:19.352 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 17:44:19.353 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 17:44:19.355 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 17:45:13.023 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-06-22 17:45:13.114 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-22 17:45:13.229 | INFO     | logging:callHandlers:1737 - Waiting for connections to close. (CTRL+C to force quit)
+2026-06-22 17:45:47.521 | INFO     | services.ai_service:generate_ai_summary:125 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 17:45:58.458 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_02ca93884031410f961298989b089074.mp3
+2026-06-22 17:45:58.458 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_02ca93884031410f961298989b089074.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_02ca93884031410f961298989b089074.mp3'
+2026-06-22 17:45:58.460 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_31b442dfa75d4b7dba9af3aecd3c51d4.mp3
+2026-06-22 17:46:07.449 | INFO     | logging:callHandlers:1737 - 192.168.15.109:52968 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-22 17:46:07.524 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-22 17:46:07.525 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-22 17:46:07.526 | INFO     | logging:callHandlers:1737 - Finished server process [6884]
+2026-06-22 17:46:11.292 | INFO     | logging:callHandlers:1737 - Started server process [10196]
+2026-06-22 17:46:11.293 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 17:46:11.294 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 17:46:13.016 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 17:46:13.017 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 17:46:13.018 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 17:47:24.372 | INFO     | logging:callHandlers:1737 - 127.0.0.1:65179 - "POST /api/clear-cache HTTP/1.1" 200
+2026-06-22 17:48:49.599 | INFO     | services.ai_service:generate_ai_summary:125 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 17:49:01.164 | ERROR    | services.ai_service:generate_ai_summary:149 - AI summary error in generate_ai_summary outer block: Unterminated string starting at: line 15 column 18 (char 3216)
+2026-06-22 17:49:04.505 | INFO     | logging:callHandlers:1737 - 127.0.0.1:65180 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-22 17:58:58.309 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-22 17:58:58.310 | INFO     | logging:callHandlers:1737 - Started reloader process [22976] using StatReload
+2026-06-22 17:59:01.298 | INFO     | logging:callHandlers:1737 - Started server process [3748]
+2026-06-22 17:59:01.299 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 17:59:01.300 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 17:59:03.266 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 17:59:03.267 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 17:59:03.268 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 17:59:06.172 | INFO     | logging:callHandlers:1737 - 127.0.0.1:65519 - "GET / HTTP/1.1" 200
+2026-06-22 18:00:23.886 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-22 18:00:23.988 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-22 18:00:23.989 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-22 18:00:23.989 | INFO     | logging:callHandlers:1737 - Finished server process [3748]
+2026-06-22 18:00:24.304 | INFO     | logging:callHandlers:1737 - Stopping reloader process [22976]
+2026-06-22 18:00:35.161 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-22 18:00:35.162 | INFO     | logging:callHandlers:1737 - Started reloader process [19428] using StatReload
+2026-06-22 18:00:37.722 | INFO     | logging:callHandlers:1737 - Started server process [20400]
+2026-06-22 18:00:37.723 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 18:00:37.724 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 18:00:39.624 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 18:00:39.625 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 18:00:39.626 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 18:00:42.888 | INFO     | logging:callHandlers:1737 - 127.0.0.1:49180 - "GET /docs HTTP/1.1" 200
+2026-06-22 18:00:43.001 | INFO     | logging:callHandlers:1737 - 127.0.0.1:49180 - "GET /openapi.json HTTP/1.1" 200
+2026-06-22 18:00:43.990 | INFO     | logging:callHandlers:1737 - 127.0.0.1:49180 - "GET /docs HTTP/1.1" 200
+2026-06-22 18:00:44.095 | INFO     | logging:callHandlers:1737 - 127.0.0.1:49180 - "GET /openapi.json HTTP/1.1" 200
+2026-06-22 18:02:14.958 | INFO     | services.ai_service:generate_ai_summary:125 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 18:02:43.679 | INFO     | logging:callHandlers:1737 - 127.0.0.1:49182 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-22 18:06:35.829 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-06-22 18:06:35.872 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-22 18:06:35.975 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-22 18:06:35.976 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-22 18:06:35.978 | INFO     | logging:callHandlers:1737 - Finished server process [20400]
+2026-06-22 18:06:40.169 | INFO     | logging:callHandlers:1737 - Started server process [11728]
+2026-06-22 18:06:40.170 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-22 18:06:40.171 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-22 18:06:42.317 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-22 18:06:42.323 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-22 18:06:42.326 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-22 18:09:34.349 | INFO     | logging:callHandlers:1737 - 127.0.0.1:49882 - "POST /api/clear-cache HTTP/1.1" 200
+2026-06-22 18:11:02.359 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-22 18:11:17.136 | INFO     | logging:callHandlers:1737 - 127.0.0.1:49883 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-23 09:23:26.123 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-23 09:23:26.124 | INFO     | logging:callHandlers:1737 - Started reloader process [18660] using StatReload
+2026-06-23 09:23:29.079 | INFO     | logging:callHandlers:1737 - Started server process [15964]
+2026-06-23 09:23:29.080 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-23 09:23:29.081 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-23 09:23:30.009 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-23 09:23:30.010 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-23 09:23:30.011 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-23 09:23:36.437 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50698 - "GET / HTTP/1.1" 200
+2026-06-23 09:23:36.476 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50698 - "GET /favicon.ico HTTP/1.1" 404
+2026-06-23 09:23:40.343 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50698 - "GET /docs HTTP/1.1" 200
+2026-06-23 09:23:40.805 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50698 - "GET /openapi.json HTTP/1.1" 200
+2026-06-23 09:23:41.498 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50698 - "GET /docs HTTP/1.1" 200
+2026-06-23 09:23:41.704 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50698 - "GET /openapi.json HTTP/1.1" 200
+2026-06-23 09:31:57.784 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50963 - "GET / HTTP/1.1" 200
+2026-06-23 09:32:01.489 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50963 - "GET /docs HTTP/1.1" 200
+2026-06-23 09:32:01.577 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50963 - "GET /openapi.json HTTP/1.1" 200
+2026-06-23 09:32:02.438 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50963 - "GET /docs HTTP/1.1" 200
+2026-06-23 09:32:02.536 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50963 - "GET /openapi.json HTTP/1.1" 200
+2026-06-23 09:33:34.075 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-23 09:33:44.750 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_0b0ed48b146a42ffbb0a9f08ff930990.mp3
+2026-06-23 09:33:44.750 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_0b0ed48b146a42ffbb0a9f08ff930990.mp3
+2026-06-23 09:33:44.751 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_11be386f5792423bbb44624531f2346e.mp3
+2026-06-23 09:33:44.752 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_5e72e7ed05224c909ca61b2b2c4fb779.mp3
+2026-06-23 09:33:44.753 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_5e72e7ed05224c909ca61b2b2c4fb779.mp3
+2026-06-23 09:33:44.754 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_5ebdacbdc885415f982508717b00571f.mp3
+2026-06-23 09:33:44.755 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_5ebdacbdc885415f982508717b00571f.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_5ebdacbdc885415f982508717b00571f.mp3'
+2026-06-23 09:33:44.757 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_5fe592051ce544dba802c5aa7b7f361b.mp3
+2026-06-23 09:33:44.757 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_5fe592051ce544dba802c5aa7b7f361b.mp3: [WinError 2] The system cannot find the file specified: 'static\\audio\\tts_5fe592051ce544dba802c5aa7b7f361b.mp3'
+2026-06-23 09:33:44.759 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_76b36ee6d8184dc295bd9d40abf01d2f.mp3
+2026-06-23 09:33:44.759 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_76b36ee6d8184dc295bd9d40abf01d2f.mp3
+2026-06-23 09:33:44.762 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_a3410f7c590846bf933074ee76f28df8.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_a3410f7c590846bf933074ee76f28df8.mp3'
+2026-06-23 09:33:44.762 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_a3410f7c590846bf933074ee76f28df8.mp3
+2026-06-23 09:33:44.764 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_be85bd95d62641e089dabc690973c93e.mp3
+2026-06-23 09:33:44.765 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_be85bd95d62641e089dabc690973c93e.mp3
+2026-06-23 09:33:49.785 | INFO     | logging:callHandlers:1737 - 127.0.0.1:50964 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-23 12:23:14.891 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-23 12:23:14.893 | INFO     | logging:callHandlers:1737 - Started reloader process [10296] using StatReload
+2026-06-23 12:23:17.102 | INFO     | logging:callHandlers:1737 - Started server process [2672]
+2026-06-23 12:23:17.103 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-23 12:23:17.103 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-23 12:23:17.954 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-23 12:23:17.955 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-23 12:23:17.958 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-23 12:23:19.789 | INFO     | logging:callHandlers:1737 - 127.0.0.1:60437 - "GET /docs HTTP/1.1" 200
+2026-06-23 12:23:20.297 | INFO     | logging:callHandlers:1737 - 127.0.0.1:60437 - "GET /openapi.json HTTP/1.1" 200
+2026-06-23 12:24:40.307 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-23 12:24:51.526 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_3f38e12640314d7bafc1a4436b2666ad.mp3
+2026-06-23 12:24:51.528 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_99e9d34a171a4b2288e7a8e8cb818871.mp3
+2026-06-23 12:24:51.529 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_99e9d34a171a4b2288e7a8e8cb818871.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_99e9d34a171a4b2288e7a8e8cb818871.mp3'
+2026-06-23 12:24:56.860 | INFO     | logging:callHandlers:1737 - 127.0.0.1:60438 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-23 13:29:31.173 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'database.py'. Reloading...
+2026-06-23 13:29:31.284 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-23 13:29:31.423 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-23 13:29:31.438 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-23 13:29:31.469 | INFO     | logging:callHandlers:1737 - Finished server process [2672]
+2026-06-23 13:29:36.236 | INFO     | logging:callHandlers:1737 - Started server process [13744]
+2026-06-23 13:29:36.237 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-23 13:29:36.238 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-23 13:29:37.226 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-23 13:29:37.227 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-23 13:29:37.227 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-23 13:32:07.658 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-23 13:32:23.070 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_2003a6da9e1643eb956d25f2f33a992c.mp3
+2026-06-23 13:32:23.071 | WARNING  | services.tts_service:cleanup_old_audio_files:64 - Failed to clean up static\audio\tts_2003a6da9e1643eb956d25f2f33a992c.mp3: [WinError 5] Access is denied: 'static\\audio\\tts_2003a6da9e1643eb956d25f2f33a992c.mp3'
+2026-06-23 13:32:23.074 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_a5efbcf827ab478db162f5b371e8b13e.mp3
+2026-06-23 13:32:23.074 | INFO     | services.tts_service:cleanup_old_audio_files:62 - Cleaned up old audio file: static\audio\tts_a5efbcf827ab478db162f5b371e8b13e.mp3
+2026-06-23 13:33:44.264 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-06-23 14:28:32.721 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'database.py'. Reloading...
+2026-06-23 14:28:32.731 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-23 14:28:32.840 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-23 14:28:32.841 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-23 14:28:32.842 | INFO     | logging:callHandlers:1737 - Finished server process [13744]
+2026-06-23 14:28:37.245 | INFO     | logging:callHandlers:1737 - Started server process [10376]
+2026-06-23 14:28:37.246 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-23 14:28:37.247 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-23 14:28:38.443 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-23 14:28:38.444 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-23 14:28:38.445 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-23 14:29:00.705 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-06-23 14:29:00.773 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-23 14:29:00.882 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-23 14:29:00.883 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-23 14:29:00.885 | INFO     | logging:callHandlers:1737 - Finished server process [10376]
+2026-06-23 14:29:04.171 | INFO     | logging:callHandlers:1737 - Started server process [7752]
+2026-06-23 14:29:04.172 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-23 14:29:04.173 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-23 14:29:05.195 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-23 14:29:05.196 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-23 14:29:05.197 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-23 14:29:25.614 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\tts_service.py'. Reloading...
+2026-06-23 14:29:25.681 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-23 14:29:25.790 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-23 14:29:25.792 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-23 14:29:25.792 | INFO     | logging:callHandlers:1737 - Finished server process [7752]
+2026-06-23 14:29:29.715 | INFO     | logging:callHandlers:1737 - Started server process [17680]
+2026-06-23 14:29:29.716 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-23 14:29:29.717 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-23 14:29:30.783 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-23 14:29:30.784 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-23 14:29:30.785 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-23 14:30:52.370 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-23 14:31:04.060 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_79e35707089f41b3be31e71314a8a53f.mp3
+2026-06-23 14:31:04.061 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_ecee3a414cce4a36b612ba16f5a791d6.mp3
+2026-06-23 14:32:29.450 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
