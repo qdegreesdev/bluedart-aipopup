@@ -63,4 +63,4 @@ To prevent the database and AI from being overloaded if the user refreshes the p
 There is a secondary endpoint `/api/ask-ai` which allows the user to type custom questions into the popup.
 1. It runs the exact same database queries to get the current context.
 2. It sends the data context + the user's explicit question to OpenAI.
-3. OpenAI acts as a data analyst to answer the specific question using *only* the real-time data provided in the prompt.
+3. OpenAI acts as a data analyst to answer the specific question using *only* the real-time data provided in the prompt....
