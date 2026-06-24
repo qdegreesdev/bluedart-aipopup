@@ -13,6 +13,7 @@ from pydantic import BaseModel
 from fastapi import APIRouter, HTTPException, Query, Form, BackgroundTasks, Request
 from fastapi.responses import PlainTextResponse, FileResponse, Response
 import os
+import uuid
 from loguru import logger
 
 from config import settings
@@ -131,6 +132,7 @@ async def ask_ai(
 @router.post("/login-popup-summary")
 async def login_popup_summary(
     request: Request,
+    background_tasks: BackgroundTasks,
     user_last_login_date: str = Form(...),
     user_current_login_date: str = Form(...)
 ):
@@ -164,7 +166,8 @@ async def login_popup_summary(
         db = get_db_service()
         if not db or not db._ensure_connection() or not database.DB_AVAILABLE or settings.use_mock_data:
             summary_text = "We are currently experiencing a temporary database connection issue. Our team is working to restore live data access shortly. Please check back soon."
-            summary_audio_filename = await generate_audio_file(summary_text)
+            summary_audio_filename = f"tts_{uuid.uuid4().hex}.mp3"
+            background_tasks.add_task(generate_audio_file, text=summary_text, filename=summary_audio_filename)
             return {
                 "greeting": f"Good day User {client_id}",
                 "ai_summary": "<p>We are currently experiencing a temporary database connection issue. Our team is working to restore live data access shortly. Please check back soon.</p>",
@@ -205,7 +208,8 @@ async def login_popup_summary(
         except Exception as e:
             logger.error(f"Database error during popup summary fetch: {e}")
             summary_text = "We are currently experiencing a temporary database connection issue. Our team is working to restore live data access shortly. Please check back soon."
-            summary_audio_filename = await generate_audio_file(summary_text)
+            summary_audio_filename = f"tts_{uuid.uuid4().hex}.mp3"
+            background_tasks.add_task(generate_audio_file, text=summary_text, filename=summary_audio_filename)
             response_data = {
                 "greeting": greeting,
                 "ai_summary": "<p>We are currently experiencing a temporary database connection issue. Our team is working to restore live data access shortly. Please check back soon.</p>",
@@ -220,7 +224,8 @@ async def login_popup_summary(
 
         if not nps_data and not critical_issues:
             summary_text = f"Welcome back! We have checked the system, and there are no new survey responses recorded since your last login on {last_login_label}. You are fully caught up!"
-            summary_audio_filename = await generate_audio_file(summary_text)
+            summary_audio_filename = f"tts_{uuid.uuid4().hex}.mp3"
+            background_tasks.add_task(generate_audio_file, text=summary_text, filename=summary_audio_filename)
             return {
                 "greeting": greeting,
                 "ai_summary": f"<p>Welcome back! We have checked the system, and there are <strong>no new survey responses</strong> recorded since your last login on <strong>{last_login_label}</strong>. You are fully caught up!</p>",
@@ -266,11 +271,12 @@ async def login_popup_summary(
                 voc_texts.append(text)
             voc_tts_text = "Here is the top customer feedback. " + " ".join(voc_texts)
 
-        # Generate audio for summary and VOCs in parallel
-        summary_audio_task = generate_audio_file(ai.get("summary", ""))
-        voc_audio_task = generate_audio_file(voc_tts_text)
+        # Generate audio for summary and VOCs in the background
+        summary_audio_filename = f"tts_{uuid.uuid4().hex}.mp3"
+        voc_audio_filename = f"tts_{uuid.uuid4().hex}.mp3"
         
-        summary_audio_filename, voc_audio_filename = await asyncio.gather(summary_audio_task, voc_audio_task)
+        background_tasks.add_task(generate_audio_file, text=ai.get("summary", ""), filename=summary_audio_filename)
+        background_tasks.add_task(generate_audio_file, text=voc_tts_text, filename=voc_audio_filename)
 
         response_data = {
             "greeting": greeting,

@@ -15,6 +15,7 @@ from contextlib import contextmanager
 from datetime import date, datetime, timedelta
 from typing import Any
 
+import re
 import pymysql
 from pymysql.cursors import DictCursor
 
@@ -566,7 +567,7 @@ class DatabaseService:
                 "severity_score": severity_score,
                 "theme":          (row.get("theme") or "Unknown").strip(),
                 "sub_category":   "",
-                "verbatim":       (row.get("verbatim") or "").strip()[:300],
+                "verbatim":       re.sub(r'[\r\n]+', ' ', (row.get("verbatim") or "").strip())[:300],
                 "f1_label":       "Region",
                 "f1_val":         f1_full,
                 "f2_label":       "Zone",

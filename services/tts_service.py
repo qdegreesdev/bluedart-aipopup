@@ -63,7 +63,7 @@ def cleanup_old_audio_files(max_age_seconds: int = 1800):
             # Silently ignore cleanup errors (e.g., WinError 5 for locked files)
             pass
 
-async def generate_audio_file(text: str, voice: str = DEFAULT_VOICE) -> str:
+async def generate_audio_file(text: str, voice: str = DEFAULT_VOICE, filename: str = None) -> str:
     """Generates an MP3 file using Edge-TTS and returns the unique filename."""
     clean_text = clean_text_for_speech(text)
     if not clean_text:
@@ -75,7 +75,9 @@ async def generate_audio_file(text: str, voice: str = DEFAULT_VOICE) -> str:
     # Clean up files older than 30 minutes in a background thread to prevent blocking
     asyncio.create_task(asyncio.to_thread(cleanup_old_audio_files))
     
-    filename = f"tts_{uuid.uuid4().hex}.mp3"
+    if not filename:
+        filename = f"tts_{uuid.uuid4().hex}.mp3"
+        
     filepath = os.path.join("static", "audio", filename)
     
     try:

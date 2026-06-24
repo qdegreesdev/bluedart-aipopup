@@ -311,3 +311,189 @@
 2026-06-23 14:31:04.060 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_79e35707089f41b3be31e71314a8a53f.mp3
 2026-06-23 14:31:04.061 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_ecee3a414cce4a36b612ba16f5a791d6.mp3
 2026-06-23 14:32:29.450 | INFO     | services.ai_service:answer_user_question:353 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-06-24 11:58:13.444 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-24 11:58:13.445 | INFO     | logging:callHandlers:1737 - Started reloader process [20132] using StatReload
+2026-06-24 11:58:17.648 | INFO     | logging:callHandlers:1737 - Started server process [14104]
+2026-06-24 11:58:17.650 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 11:58:17.651 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 11:58:20.760 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 11:58:20.762 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 11:58:20.764 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 11:58:31.171 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52073 - "GET / HTTP/1.1" 200
+2026-06-24 11:58:31.206 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52073 - "GET /favicon.ico HTTP/1.1" 404
+2026-06-24 11:58:35.329 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52073 - "GET /docs HTTP/1.1" 200
+2026-06-24 11:58:36.063 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52073 - "GET /openapi.json HTTP/1.1" 200
+2026-06-24 11:58:37.420 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52073 - "GET /docs HTTP/1.1" 200
+2026-06-24 11:58:37.697 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52073 - "GET /openapi.json HTTP/1.1" 200
+2026-06-24 11:59:58.934 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-24 12:00:14.123 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_2fa47fb8bdad42ebb5b81979aaf6b374.mp3
+2026-06-24 12:00:14.124 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_41eb5f3436c74f9e843e0e8c0e27e675.mp3
+2026-06-24 12:00:14.125 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_8a4475d2548f4c83b13a1fc8bfe74082.mp3
+2026-06-24 12:00:25.583 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52074 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-24 12:02:52.450 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-06-24 12:02:52.461 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:02:52.578 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:02:52.579 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:02:52.580 | INFO     | logging:callHandlers:1737 - Finished server process [14104]
+2026-06-24 12:02:57.383 | INFO     | logging:callHandlers:1737 - Started server process [21404]
+2026-06-24 12:02:57.384 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:02:57.385 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:02:58.785 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:02:58.786 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:02:58.787 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:04:56.650 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-06-24 12:04:56.673 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:04:56.776 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:04:56.777 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:04:56.778 | INFO     | logging:callHandlers:1737 - Finished server process [21404]
+2026-06-24 12:05:01.299 | INFO     | logging:callHandlers:1737 - Started server process [9612]
+2026-06-24 12:05:01.299 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:05:01.300 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:05:02.579 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:05:02.580 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:05:02.580 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:07:42.659 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\tts_service.py'. Reloading...
+2026-06-24 12:07:42.702 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:07:42.815 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:07:42.816 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:07:42.817 | INFO     | logging:callHandlers:1737 - Finished server process [9612]
+2026-06-24 12:07:47.235 | INFO     | logging:callHandlers:1737 - Started server process [15580]
+2026-06-24 12:07:47.236 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:07:47.237 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:07:48.800 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:07:48.800 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:07:48.801 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:08:04.127 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-06-24 12:08:04.195 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:08:04.310 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:08:04.311 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:08:04.312 | INFO     | logging:callHandlers:1737 - Finished server process [15580]
+2026-06-24 12:08:08.605 | INFO     | logging:callHandlers:1737 - Started server process [20956]
+2026-06-24 12:08:08.606 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:08:08.607 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:08:09.832 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:08:09.833 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:08:09.834 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:08:36.931 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:08:37.056 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:08:37.057 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:08:37.058 | INFO     | logging:callHandlers:1737 - Finished server process [20956]
+2026-06-24 12:08:37.312 | INFO     | logging:callHandlers:1737 - Stopping reloader process [20132]
+2026-06-24 12:08:43.641 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-24 12:08:43.641 | INFO     | logging:callHandlers:1737 - Started reloader process [7172] using StatReload
+2026-06-24 12:08:47.415 | INFO     | logging:callHandlers:1737 - Started server process [13392]
+2026-06-24 12:08:47.415 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:08:47.417 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:08:48.907 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:08:48.908 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:08:48.909 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:11:08.523 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-24 12:11:21.322 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_636fbf24e8a14afeabbfd23042df23d5.mp3
+2026-06-24 12:11:21.323 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_e5fe41bb5e4b46f58fcf071303ab6f81.mp3
+2026-06-24 12:13:54.287 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:13:54.398 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:13:54.398 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:13:54.399 | INFO     | logging:callHandlers:1737 - Finished server process [13392]
+2026-06-24 12:13:54.774 | INFO     | logging:callHandlers:1737 - Stopping reloader process [7172]
+2026-06-24 12:14:03.841 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-06-24 12:14:03.842 | INFO     | logging:callHandlers:1737 - Started reloader process [17380] using StatReload
+2026-06-24 12:14:07.677 | INFO     | logging:callHandlers:1737 - Started server process [14832]
+2026-06-24 12:14:07.678 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:14:07.679 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:14:09.818 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:14:09.818 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:14:09.819 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:14:18.278 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53077 - "GET / HTTP/1.1" 200
+2026-06-24 12:14:18.317 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53077 - "GET /favicon.ico HTTP/1.1" 404
+2026-06-24 12:14:21.865 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53077 - "GET /docs HTTP/1.1" 200
+2026-06-24 12:14:22.122 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53077 - "GET /openapi.json HTTP/1.1" 200
+2026-06-24 12:14:24.311 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53077 - "GET /docs HTTP/1.1" 200
+2026-06-24 12:14:24.512 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53077 - "GET /openapi.json HTTP/1.1" 200
+2026-06-24 12:15:41.765 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-24 12:15:55.586 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53078 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-24 12:19:17.782 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-06-24 12:19:17.887 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:19:17.995 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:19:17.996 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:19:17.997 | INFO     | logging:callHandlers:1737 - Finished server process [14832]
+2026-06-24 12:19:22.982 | INFO     | logging:callHandlers:1737 - Started server process [5668]
+2026-06-24 12:19:22.983 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:19:22.984 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:19:27.553 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:19:27.554 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:19:27.555 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:33:54.295 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-06-24 12:33:54.396 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:33:54.506 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:33:54.511 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:33:54.512 | INFO     | logging:callHandlers:1737 - Finished server process [5668]
+2026-06-24 12:33:59.329 | INFO     | logging:callHandlers:1737 - Started server process [15756]
+2026-06-24 12:33:59.330 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:33:59.331 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:34:01.804 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:34:01.805 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:34:01.806 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:37:52.964 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-06-24 12:37:53.028 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:37:53.138 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:37:53.139 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:37:53.140 | INFO     | logging:callHandlers:1737 - Finished server process [15756]
+2026-06-24 12:37:57.659 | INFO     | logging:callHandlers:1737 - Started server process [18480]
+2026-06-24 12:37:57.660 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:37:57.661 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:37:58.906 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:37:58.906 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:37:58.907 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 12:38:37.457 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-06-24 12:38:37.503 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 12:38:37.614 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 12:38:37.615 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 12:38:37.615 | INFO     | logging:callHandlers:1737 - Finished server process [18480]
+2026-06-24 12:38:41.291 | INFO     | logging:callHandlers:1737 - Started server process [5468]
+2026-06-24 12:38:41.292 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 12:38:41.293 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 12:38:48.234 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 12:38:48.235 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 12:38:48.236 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 13:33:59.020 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-24 13:34:11.054 | INFO     | logging:callHandlers:1737 - 127.0.0.1:56862 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-24 13:37:28.447 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'database.py'. Reloading...
+2026-06-24 13:37:28.542 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 13:37:28.651 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 13:37:28.652 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 13:37:28.653 | INFO     | logging:callHandlers:1737 - Finished server process [5468]
+2026-06-24 13:37:34.274 | INFO     | logging:callHandlers:1737 - Started server process [19220]
+2026-06-24 13:37:34.275 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 13:37:34.276 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 13:37:35.408 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 13:37:35.409 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 13:37:35.410 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 13:37:41.441 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'database.py'. Reloading...
+2026-06-24 13:37:41.470 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 13:37:41.579 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 13:37:41.580 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 13:37:41.581 | INFO     | logging:callHandlers:1737 - Finished server process [19220]
+2026-06-24 13:37:46.281 | INFO     | logging:callHandlers:1737 - Started server process [7544]
+2026-06-24 13:37:46.282 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 13:37:46.283 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 13:37:47.477 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 13:37:47.478 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 13:37:47.478 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 13:42:07.828 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'scratch\verify_db.py'. Reloading...
+2026-06-24 13:42:07.842 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 13:42:07.950 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 13:42:07.951 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 13:42:07.953 | INFO     | logging:callHandlers:1737 - Finished server process [7544]
+2026-06-24 13:42:12.788 | INFO     | logging:callHandlers:1737 - Started server process [20356]
+2026-06-24 13:42:12.789 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-06-24 13:42:12.790 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-06-24 13:42:13.668 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-06-24 13:42:13.669 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-06-24 13:42:13.670 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-06-24 13:44:29.920 | INFO     | services.ai_service:generate_ai_summary:126 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-06-24 13:44:45.932 | INFO     | logging:callHandlers:1737 - 127.0.0.1:57450 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-06-24 13:51:41.813 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-06-24 13:51:41.931 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-06-24 13:51:41.932 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-06-24 13:51:41.932 | INFO     | logging:callHandlers:1737 - Finished server process [20356]
+2026-06-24 13:51:42.316 | INFO     | logging:callHandlers:1737 - Stopping reloader process [17380]
