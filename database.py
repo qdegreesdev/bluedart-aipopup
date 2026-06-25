@@ -898,6 +898,15 @@ class DatabaseService:
         for survey_id in survey_ids:
             voice = self.get_customer_voice_data(survey_id, last_login_dt, now_dt)
             all_records.extend(voice.get("high_severity_records", []))
+            
+        # Sort globally across all surveys by criticality and created_at descending
+        all_records.sort(
+            key=lambda x: (
+                x.get('is_critical') or 0, 
+                x.get('created_at') if isinstance(x.get('created_at'), datetime) else datetime.min
+            ), 
+            reverse=True
+        )
         return {"high_severity_records": all_records}
 
     def get_survey_id_by_touchpoint(self, touch_point_id: Any) -> list[int]:
