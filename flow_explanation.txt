@@ -29,7 +29,7 @@ The system is designed to show "What changed since you were last here." It calcu
 Once the raw data is collected, it is passed to the AI Service (services/ai_service.py).
 
 **How the AI reads the data:**
-The system does *not* send your entire database to the AI. Instead, the backend Python code calculates the metrics (NPS changes, top 3 branches, top 5 critical issues, etc.) and constructs a highly structured text prompt. 
+The system does *not* send your entire database to the AI. Instead, the backend Python code calculates the metrics (NPS changes, top 3 branches, top 4 critical issues, etc.) and constructs a highly structured text prompt. 
 
 *Example of what the AI actually sees:*
 > "NPS is currently 45 (was 40, +5 points). Top improving area is WEST - BOM - ADR (+12 pts). Top declining area is EAST - CCU (-8 pts). Critical issue: 'Package arrived damaged' (2 churn signals)."
@@ -64,3 +64,42 @@ There is a secondary endpoint `/api/ask-ai` which allows the user to type custom
 1. It runs the exact same database queries to get the current context.
 2. It sends the data context + the user's explicit question to OpenAI.
 3. OpenAI acts as a data analyst to answer the specific question using *only* the real-time data provided in the prompt....
+
+
+
+Here are the exact MySQL database tables your application queries for each type of data:
+
+Voice of Customer (VOC) & Alerts:
+
+voc_alerts: This single table is where all the high-severity customer feedback, verbatim quotes, priority levels, and themes are queried from.
+NPS & Demographic Data (Survey Responses):
+
+survey_dynamic_id_{survey_id}: Your system dynamically creates or queries a different table for each specific survey (for example, survey_dynamic_id_25).
+(Exception): If the Survey ID is exactly 23, the code is hardcoded to query a table named tp10_response_part instead.
+Demographic Name Mapping (Regions/Branches):
+
+master_regions, master_locations, and master_branches: These tables are used strictly as lookup caches to convert raw location codes in the survey responses into full, readable human names (e.g., turning "DEL" into "Delhi").
+Survey & Touchpoint Configurations:
+
+surveys: Queried to find the survey names, touchpoint codes, and active Survey IDs.
+survey_questions: Queried to find the specific question slugs associated with the NPS scoring questions.
+
+
+
+which table gives us NPS and does we directly get the nps or we calculate with promotors ,detractors etc 
+12:18 PM
+1. Which Table is Used? NPS data is pulled from the dynamic survey response tables. Because each survey in your system can have its own table, the backend dynamically queries tables like survey_dynamic_id_24, survey_dynamic_id_25, etc. (With one hardcoded exception: if the survey ID is 23, it queries the tp10_response_part table).
+
+2. Do we get NPS directly or calculate it? You do NOT get a pre-calculated NPS score directly from the database. The database only stores the individual 0–10 scores that each customer submitted.
+
+Your Python backend (database.py) actively calculates the final NPS score on the fly using the industry-standard formula.
+
+Here is exactly how your Python code (inside the _calculate_nps function) does the math:
+
+It counts Promoters: Every customer who gave a score of 9 or 10.
+It counts Passives: Every customer who gave a score of 7 or 8.
+It counts Detractors: Every customer who gave a score of 6 or below.
+It then applies this exact formula to calculate the final NPS percentage:
+python
+nps = ((promoters - detractors) / total_responses) * 100
+By calculating it on the fly, your system ensures the NPS score is perfectly accurate for whatever custom time window you happen to be viewing on the dashboard!

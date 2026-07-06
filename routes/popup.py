@@ -7,6 +7,7 @@ DATE LOGIC:
   - previous_period : equal window before last_login  (for comparison)
   - All W1/W2 week concepts removed.
 """
+# Reload trigger
 from datetime import datetime, timedelta
 
 from pydantic import BaseModel
@@ -116,12 +117,20 @@ async def ask_ai(
         if not nps_data:
             return {"answer": "There are no new survey responses recorded since your last login. You are fully caught up!"}
 
-        demographics, voice, survey_comparison = await asyncio.gather(
+        window = current_login_dt - last_login_dt
+        if window.total_seconds() < 3600:
+            window = timedelta(hours=1)
+        prev_start = last_login_dt - window
+        prev_end = last_login_dt
+
+        demographics, voice, prev_voice, survey_comparison = await asyncio.gather(
             asyncio.to_thread(db.get_demographic_breakdown_for_surveys, survey_ids, last_login_dt, current_login_dt),
             asyncio.to_thread(db.get_customer_voice_data_for_surveys, survey_ids, last_login_dt, current_login_dt),
+            asyncio.to_thread(db.get_customer_voice_data_for_surveys, survey_ids, prev_start, prev_end),
             asyncio.to_thread(db.get_survey_comparison, survey_ids, last_login_dt, current_login_dt)
         )
         critical_issues = await asyncio.to_thread(_aggregate_issues, voice.get("high_severity_records", []))
+        prev_critical_issues = await asyncio.to_thread(_aggregate_issues, prev_voice.get("high_severity_records", []))
 
         answer = await asyncio.to_thread(answer_user_question, nps_data, demographics, critical_issues, question, survey_comparison)
         return {"answer": answer}
@@ -189,6 +198,12 @@ async def login_popup_summary(
         elif hour >= 17:
             greeting_time = "Good Evening"
         greeting = f"{greeting_time}, {user_name}"
+        window = current_login_dt - last_login_dt
+        if window.total_seconds() < 3600:
+            window = timedelta(hours=1)
+        prev_start = last_login_dt - window
+        prev_end = last_login_dt
+
         # 2. Fetch surveys and analytics with fallback for DB errors
         import asyncio
         try:
@@ -197,16 +212,18 @@ async def login_popup_summary(
                 survey_ids.extend(db.get_survey_id_by_touchpoint(tp))
 
             # 3. Fetch analytics
-            nps_data, demographics, voice, survey_comparison = await asyncio.gather(
+            nps_data, demographics, voice, prev_voice, survey_comparison = await asyncio.gather(
                 asyncio.to_thread(db.get_nps_data_for_surveys, survey_ids, last_login_dt, current_login_dt),
                 asyncio.to_thread(db.get_demographic_breakdown_for_surveys, survey_ids, last_login_dt, current_login_dt),
                 asyncio.to_thread(db.get_customer_voice_data_for_surveys, survey_ids, last_login_dt, current_login_dt),
+                asyncio.to_thread(db.get_customer_voice_data_for_surveys, survey_ids, prev_start, prev_end),
                 asyncio.to_thread(db.get_survey_comparison, survey_ids, last_login_dt, current_login_dt)
             )
             
             if not nps_data:
                 nps_data = {}
             critical_issues = await asyncio.to_thread(_aggregate_issues, voice.get("high_severity_records", []))
+            prev_critical_issues = await asyncio.to_thread(_aggregate_issues, prev_voice.get("high_severity_records", []))
         except Exception as e:
             logger.error(f"Database error during popup summary fetch: {e}")
             summary_text = "We are currently experiencing a temporary database connection issue. Our team is working to restore live data access shortly. Please check back soon."
@@ -214,7 +231,7 @@ async def login_popup_summary(
             background_tasks.add_task(generate_audio_file, text=summary_text, filename=summary_audio_filename)
             response_data = {
                 "greeting": greeting,
-                "ai_summary": "<p>We are currently experiencing a temporary database connection issue. Our team is working to restore live data access shortly. Please check back soon.</p>",
+                "ai_summary": f"<p>We are currently experiencing a temporary database connection issue. Error: {str(e)}</p>",
                 "ai_summary_audio_url": f"{base_url}/api/audio/{summary_audio_filename}" if summary_audio_filename else None,
                 "top_alert_VOC": [],
                 "voc_audio_url": None,
@@ -237,12 +254,16 @@ async def login_popup_summary(
                 "is_data_found": 0
             }
 
-        ai = await asyncio.to_thread(generate_ai_summary, nps_data, demographics, critical_issues, survey_comparison, last_login_label, current_login_dt, html_format=True)
+        ai = await asyncio.to_thread(generate_ai_summary, nps_data, demographics, critical_issues, survey_comparison, last_login_label, current_login_dt, html_format=True, prev_critical_issues=prev_critical_issues)
 
         raw_vocs = voice.get("high_severity_records", [])
         top_alert_voc = []
+        
+        # Only include VOCs that belong to the Top 4 themes we established earlier
+        top_4_theme_names = [issue["issue"] for issue in critical_issues[:4]]
+        
         for r in raw_vocs:
-            if r.get("verbatim") and len(top_alert_voc) < 5:
+            if r.get("verbatim") and r.get("theme") in top_4_theme_names and len(top_alert_voc) < 5:
                 extra_parts = []
                 for x in [1, 2, 3, 4]:
                     if r.get(f"f{x}_val"):
@@ -410,7 +431,9 @@ def _mock_with_ai(survey_id: str, last_login_dt: datetime, current_login_dt: dat
         mock["critical_issues"], 
         mock.get("survey_comparison", []),
         last_login_label, 
-        current_login_dt
+        current_login_dt,
+        False,
+        []
     )
     mock["ai_summary"]    = ai.get("summary", "")
     mock["key_points"]    = ai.get("key_points", [])
@@ -461,4 +484,4 @@ def _aggregate_issues(records: list[dict]) -> list[dict]:
         })
 
     result.sort(key=lambda x: (-x["severity_score"], -x["count"]))
-    return result[:6]
+    return result[:4]

@@ -18,7 +18,7 @@ def _fmt_num(val):
         return val
 
 
-def generate_ai_summary(nps_data: dict, demographics: list, critical_issues: list, survey_comparison: list, last_login_label: str, current_login_dt: datetime, html_format: bool = False) -> dict:
+def generate_ai_summary(nps_data: dict, demographics: list, critical_issues: list, survey_comparison: list, last_login_label: str, current_login_dt: datetime, html_format: bool = False, prev_critical_issues: list = None) -> dict:
     hour = current_login_dt.hour
     if 5 <= hour < 12:
         greeting = "Good Morning"
@@ -42,24 +42,39 @@ def generate_ai_summary(nps_data: dict, demographics: list, critical_issues: lis
         top_decliners = sorted([d for d in valid_demos if d.get("delta", 0) < 0], key=lambda x:  x["delta"])[:3]
         top_issues = []
         if critical_issues:
-            global_sample_count = 0
-            for theme_group in critical_issues:
-                theme_sample_count = 0
-                for s in theme_group.get("samples", []):
-                    if theme_sample_count >= 2 or global_sample_count >= 10:
-                        break
+            for theme_group in critical_issues[:5]:
+                theme_name = theme_group.get("issue", "Unknown")
+                theme_count = theme_group.get("count", 0)
+                sample_strings = []
+                for s in theme_group.get("samples", [])[:2]:
                     loc_parts = []
                     for k, v in s.get("loc_data", {}).items():
                         if v and v != "Unknown":
                             loc_parts.append(f"{k}:{v}")
                     loc_str = ", ".join(loc_parts) or "Unknown Location"
                     churn_flag = " [CHURN RISK DETECTED BY DATABASE]" if s.get("churn_intent") else ""
-                    top_issues.append(f"Verbatim: \"{s.get('verbatim', '')}\" ({loc_str}){churn_flag}")
-                    theme_sample_count += 1
-                    global_sample_count += 1
-                if global_sample_count >= 10:
-                    break
-        
+                    sample_strings.append(f"Verbatim: \"{s.get('verbatim', '')}\" ({loc_str}){churn_flag}")
+                
+                samples_joined = " | ".join(sample_strings)
+                top_issues.append(f"Theme: {theme_name} (Total Contribution: {theme_count} complaints) -> {samples_joined}")
+
+        prev_top_issues = []
+        if prev_critical_issues:
+            for theme_group in prev_critical_issues[:5]:
+                theme_name = theme_group.get("issue", "Unknown")
+                theme_count = theme_group.get("count", 0)
+                sample_strings = []
+                for s in theme_group.get("samples", [])[:2]:
+                    loc_parts = []
+                    for k, v in s.get("loc_data", {}).items():
+                        if v and v != "Unknown":
+                            loc_parts.append(f"{k}:{v}")
+                    loc_str = ", ".join(loc_parts) or "Unknown Location"
+                    sample_strings.append(f"Verbatim: \"{s.get('verbatim', '')}\" ({loc_str})")
+                
+                samples_joined = " | ".join(sample_strings)
+                prev_top_issues.append(f"Theme: {theme_name} (Total Contribution: {theme_count} complaints) -> {samples_joined}")
+
         top_survey_gainers = [s for s in survey_comparison if s.get("trend") == "up"][:2]
         top_survey_decliners = [s for s in survey_comparison if s.get("trend") == "down"][:2]
         delta         = _fmt_num(nps_data.get("delta", 0) or 0)
@@ -73,11 +88,17 @@ def generate_ai_summary(nps_data: dict, demographics: list, critical_issues: lis
 If there is no change in NPS and no significant data, output a simple message like: <p>I have analyzed the changes since your last visit.</p><p>Overall NPS remains steady at <strong>[NPS]</strong>.</p>
 Otherwise, provide a narrative summary wrapped in <p> tags instead of bullet points. Use <strong> tags for key metrics and area names.
 
+CRITICAL STYLING & INTERACTIVITY RULES:
+1. Make the summary visually stunning and interactive. Include a <style> block at the top with modern CSS (e.g., elegant box-shadows, rounded corners, soft alternating row colors, smooth hover transitions on table rows).
+2. The comparison table MUST have a sleek, premium design. Add a hover effect on <tr> so they highlight when the user points at them. Use padded cells.
+3. Use HTML <details open> and <summary> tags for the customer concerns section so it is expanded by default. Make the theme names clickable summaries that expand to show deeper insights or explanations.
+4. Style key numbers or metrics (like NPS or points) as subtle "badges" using inline CSS (e.g., background-color, border-radius, padding).
+
 CRITICAL LOGIC RULES FOR NARRATIVE:
 1. Your tone and concluding sentence MUST match the actual data trend. If overall NPS has declined, the conclusion must warn about attrition risk or the need for action, rather than using blanket positive phrases like "recovery momentum". However, you MUST still highlight specific bright spots (like the top improving regions or touchpoints) to show the positive impact of what is working well.
 2. If overall NPS is improving, conclude with an encouraging statement about accelerating the positive momentum.
 3. Completely ignore touchpoints with 0 or very few responses when determining the highest change. A 100-point drop with 0 responses is just a lack of data, NOT a drastic decline.
-4. Do not use unordered lists (<ul> or <li>) in the summary text.
+4. Do not use unordered lists (<ul> or <li>) for the main narrative, but you can use them inside <details> tags.
 5. Keep the summary short, punchy, and highly impactful. Avoid wordy, repetitive phrasing (e.g., instead of "In terms of customer concerns, several themes have emerged", just say "Key customer concerns include").
 6. Format numbers cleanly: if a decimal value ends in .0, omit the decimal entirely (e.g., use 100 instead of 100.0). Never use hyphens between a number and the word "point" (e.g., use "100 points" instead of "100-points")."""
 
@@ -107,13 +128,16 @@ TOP IMPROVING AREAS (in this period):
 TOP DECLINING AREAS (in this period):
 {chr(10).join([f"- {d['name']} ({d['type']}): NPS {_fmt_num(d['current_nps'])} ({_fmt_num(d['delta'])} pts)" for d in top_decliners]) or "None significant"}
 
-CRITICAL CUSTOMER ISSUES (raw voice of customer in this period):
+CRITICAL CUSTOMER ISSUES - PREVIOUS PERIOD (since before last login):
+{chr(10).join([f"- {issue}" for issue in prev_top_issues]) or "No critical issues flagged in previous period"}
+
+CRITICAL CUSTOMER ISSUES - CURRENT PERIOD (since last login):
 {chr(10).join([f"- {issue}" for issue in top_issues]) or "No critical issues flagged"}
 
 Provide JSON with:
-- "summary": 2-3 short, highly concise paragraphs in an impressive executive briefing tone. Eliminate all fluff and filler words. You MUST start the summary exactly like this: "<p>I have analyzed the changes since your last visit.</p>". Follow it with narrative paragraphs briefly describing the overall NPS movement, the strongest area gain, and the worst decline. Also, analyze the touchpoint performance data to identify the highest change and its effect on customer experience. Next, succinctly describe the top customer concerns (analyze the verbatims to determine 2-3 themes) and conclude with a short forward-looking statement. If any verbatims indicate CHURN RISK, explicitly mention it. Only include areas or concerns actually present in the data. CRITICAL INSTRUCTION: You MUST write the area names exactly as formatted in the list, completely preserving the bracketed tags "(Region)" and "(Location)" inside the name. If you omit "(Region)" or "(Location)", the output will be rejected. Correct Example: "WEST (Region) - BOM (Location) - ADR (Branch) is leading the turnaround". {html_instruction}
+- "summary": 2-3 short, highly concise paragraphs in an impressive executive briefing tone. Eliminate all fluff and filler words. You MUST start the summary exactly like this: "<p>I have analyzed the changes since your last visit.</p>". Follow it with narrative paragraphs briefly describing the overall NPS movement, the strongest area gain, and the worst decline. Also, analyze the touchpoint performance data to identify the highest change and its effect on customer experience. Next, succinctly describe the top customer concerns and provide a clean, modern HTML table comparing the top themes between the Previous Period (Before Last Login) and the Current Period (Since Last Login) along with their overall contribution (number of complaints). Ensure the table uses <table>, <thead>, <tbody>, <tr>, <th>, and <td> tags. Conclude with a short forward-looking statement. If any verbatims indicate CHURN RISK, explicitly mention it. Only include areas or concerns actually present in the data. CRITICAL INSTRUCTION: You MUST write the area names exactly as formatted in the list, completely preserving the bracketed tags "(Region)" and "(Location)" inside the name. If you omit "(Region)" or "(Location)", the output will be rejected. Correct Example: "WEST (Region) - BOM (Location) - ADR (Branch) is leading the turnaround". {html_instruction}
 - "key_points": exactly 5 bullet strings, each under 15 words
-- "critical_vocs": exactly 5 most critical verbatim quotes representing the analyzed themes (or all available if less than 5) with their location data, extracted from the CRITICAL CUSTOMER ISSUES section. Format as an array of objects: {{"verbatim": "exact quote", "extra_info": "Label1:Value1, Label2:Value2"}}. Omit extra_info if location data is not provided.
+- "critical_vocs": exactly 5 most critical verbatim quotes representing the CURRENT top themes (or all available if less than 5) with their location data, extracted from the CRITICAL CUSTOMER ISSUES - CURRENT PERIOD section. Ensure these VOCs directly align with the top themes identified in the summary. Format as an array of objects: {{"verbatim": "exact quote", "extra_info": "Label1:Value1, Label2:Value2"}}. Omit extra_info if location data is not provided.
 """
 
         response = None
@@ -128,7 +152,7 @@ Provide JSON with:
                 model=model,
                 messages=[{"role": "user", "content": context}],
                 temperature=0.3,
-                max_tokens=800,
+                max_tokens=2000,
                 response_format={"type": "json_object"},
             )
         except Exception as e:
@@ -293,10 +317,10 @@ def answer_user_question(nps_data: dict, demographics: list, critical_issues: li
                 for s in survey_comparison
             ])
 
-        # Issues with verbatim samples and churn counts (capped to top 5 to save tokens)
+        # Issues with verbatim samples and churn counts (capped to top 4 to save tokens)
         issues_str = chr(10).join([
             f"- {i['issue']} | Count: {i['count']} | Severity: {i['severity']} | Churn/Critical Signals: {i.get('critical_count', 0)} | Samples: \"{' | '.join([s.get('verbatim', '') for s in i.get('samples', [])[:2]])}\""
-            for i in critical_issues[:5]
+            for i in critical_issues[:4]
         ])
 
         # Pre-sort for quick AI reference
@@ -358,7 +382,7 @@ CHURN INTENT SIGNALS:
                     {"role": "user",   "content": question}
                 ],
                 temperature=0.3,
-                max_tokens=800,
+                max_tokens=2000,
             )
         except Exception as e:
             logger.warning(f"OpenAI QA API call failed: {e}")

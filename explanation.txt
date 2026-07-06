@@ -1,0 +1,110 @@
+# BlueDart Login Intelligence Popup - Technical Explanation & System Flow
+
+This document explains the end-to-end flow of the SurveyCXM Login Intelligence Popup API. It details the exact logic used to fetch data, calculate severity and churn, and how that data is transmitted to the AI to generate the final dashboard summary.
+
+---
+
+## 1. The Trigger & Time Window Logic
+When a user logs into the application, the frontend makes a POST request to `/api/login-popup-summary` sending two dates:
+- `user_last_login_date` (e.g., June 25)
+- `user_current_login_date` (e.g., July 2)
+
+**How the Time Window Works:**
+To provide a fair "apples-to-apples" comparison, the Python backend (`routes/popup.py`) calculates two exact time windows:
+1. **Current Period:** The exact duration from the last login date to the current login date (e.g., exactly 7 days).
+2. **Previous Period:** It takes that identical duration (7 days) and counts backward from the last login date (e.g., June 18 to June 25).
+
+*(Failsafe: If a user logs in twice within a very short timeframe, like 5 minutes, the code artificially expands the comparison window to a minimum of 1 hour to prevent the logic from breaking).*
+
+---
+
+## 2. Database Extraction & Voice of Customer (VOC) Processing
+With the two time windows defined, the system queries the MySQL database in parallel to fetch NPS scores, touchpoint performance, demographics, and most importantly, the Voice of Customer (VOC) alerts.
+
+### How Severity Score is Calculated
+In `database.py` (around line 550), the system pulls high-severity complaints. The numerical **Severity Score (50-95)** is dynamically mapped from the text-based `priority_level` column in the database using a hardcoded dictionary:
+```python
+priority_score_map = {"critical": 95, "urgent": 90, "high": 85, "medium": 70, "low": 50}
+```
+If a complaint has a priority of "urgent", it gets a score of 90. If the priority is missing, misspelled, or blank, a fallback mechanism automatically assigns it a score of 70 (medium).
+
+### How Churn Intent is Detected
+There is no literal "churn_intent" column in the database. Instead, the Python code calculates it dynamically for each complaint:
+```python
+is_critical = bool(row.get("is_critical")) or priority == "critical" or severity_score >= 90
+```
+If a complaint meets ANY of those three conditions, the backend flags that specific customer quote with `Churn Intent = True`.
+
+### 💡 Concrete Examples of Severity and Churn Detection
+Let's imagine your database just received two new customer feedback surveys:
+
+**Example VOC #1 (Angry Customer):**
+- **Theme:** "Commitment Not Met"
+- **Verbatim (Quote):** *"You promised next-day delivery, but it’s been a week! This is unacceptable, I am switching to another courier."*
+- **Priority_Level in DB:** `"critical"`
+
+**How the Code Processes VOC #1:**
+1. The script reads `"critical"` and maps it to a **Severity Score of 95**.
+2. The script checks its churn logic: *Is the score >= 90? Yes. Is the priority "critical"? Yes.*
+3. Therefore, it assigns **Churn Intent = True**.
+4. A hidden tag `[CHURN RISK DETECTED BY DATABASE]` is secretly attached to this quote before sending it to OpenAI.
+
+**Example VOC #2 (Annoyed Customer):**
+- **Theme:** "Multiple Attempts"
+- **Verbatim (Quote):** *"The delivery guy came but didn't call me. Now I have to wait another day."*
+- **Priority_Level in DB:** `"medium"`
+
+**How the Code Processes VOC #2:**
+1. The script reads `"medium"` and maps it to a **Severity Score of 70**.
+2. The script checks its churn logic: *Is the score >= 90? No.*
+3. Therefore, it assigns **Churn Intent = False**.
+4. The quote is passed normally without any special tags.
+
+*(Fallback Example: If a third ticket had a typo like "urgnt" or was completely blank in the DB, the code's fallback `.get(priority, 70)` would automatically assign it a Severity Score of 70, preventing the system from breaking).*
+
+---
+
+## 3. Aggregating & Selecting Themes
+To prevent overwhelming the AI, the backend groups and filters the complaints in `popup.py` before sending them:
+1. **Grouping:** All complaints are grouped by their exact text `theme` from the database (e.g., "Commitment Not Met").
+2. **Ranking:** The themes are sorted first by their Max Severity Score (highest first), and tied themes are sorted by the total Volume of complaints.
+3. **Selecting:** The code slices off the **Top 4 worst themes** from the Current Period and the **Top 4 worst themes** from the Previous Period.
+
+---
+
+## 4. Data Transmitted to OpenAI for AI Summary
+To ensure performance and data privacy, we **do not** send raw database tables or PII to the AI. Instead, our backend locally aggregates the data and only sends the following specific, high-level metrics to the OpenAI API:
+
+### 1. Overall NPS Metrics
+- The overall current and previous NPS scores.
+- The total number of survey responses.
+- The percentage split of Promoters, Passives, and Detractors.
+
+### 2. Touchpoint Performance
+- The names of the survey touchpoints (e.g., "TP6 Booking of Package Experience").
+- The current NPS, previous NPS, and total responses for each touchpoint (filtered to only include touchpoints with 5+ responses for statistical relevance).
+
+### 3. Demographic / Location Highlights (Top 3 Best & Worst)
+- Instead of sending all regions and branches, the backend calculates the biggest movers locally and only sends the Top 3 Improving Branches and the Top 3 Declining Branches.
+- The data sent for these 6 branches includes: Branch Name, Current NPS, and the Point Change (Delta).
+
+### 4. Voice of Customer (VOC) / Critical Issues
+- The backend calculates the most frequent complaint categories and sends only the Top 4 Themes from the previous period and the Top 4 Themes from the current period (e.g., "Commitment Not Met", "Process Gap") along with their total complaint counts.
+- To give the AI context, we pass up to 2 sample customer quotes (verbatims) per theme, along with the location of the complaint (Region/Branch).
+- If our database detected a churn risk, a simple "Churn Risk" flag is attached to the quote.
+
+### Summary of AI Functionality
+The AI only receives pre-calculated scores, volume counts, top-performing/underperforming branch names, top complaint categories, and a few sample quotes. It uses this strictly defined context to format the concise HTML executive summary and comparison table that gets displayed on the frontend dashboard.
+
+**The Churn Flag Mechanism:**
+If a specific quote had its Churn Intent calculated as True in step 2, the Python code appends a hidden text tag to the quote: `[CHURN RISK DETECTED BY DATABASE]`. When OpenAI reads the prompt, it sees this tag and understands it must explicitly highlight this specific issue as a critical churn risk in the executive summary.
+
+**Generating the HTML Output:**
+The AI is strictly instructed to format its response in clean, premium HTML. It writes a short narrative, and then it generates an HTML `<table>` that directly compares the complaint counts for the Top 4 themes between the "Previous Period" and the "Current Period". Because the AI returns a fully constructed HTML string, the frontend team only has to inject this string directly into the dashboard modal—no extra frontend formatting is required!
+
+---
+
+## 5. Audio Generation & Caching
+Finally:
+- The generated AI summary and top quotes are sent to `services/tts_service.py` to be converted into human-like `.mp3` audio files.
+- The entire JSON response (HTML, audio URLs, greeting) is cached in server memory for 10 minutes. If the user refreshes the dashboard within 10 minutes, the server instantly returns the cached data, saving database load and AI API costs.

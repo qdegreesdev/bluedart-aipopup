@@ -13,7 +13,7 @@ Schema: dynamic per-survey tables (survey_responses_{id}, filter_hierarchy_{id},
 import logging
 from contextlib import contextmanager
 from datetime import date, datetime, timedelta
-from typing import Any
+from typing import Any, Optional
 
 import re
 import pymysql
@@ -972,9 +972,9 @@ class DatabaseService:
 
 
 # ── Module-level singleton ────────────────────────────────────────────────────
-def get_db_service() -> DatabaseService | None:
+def get_db_service() -> Optional[DatabaseService]:
     global _db_service_instance, DB_AVAILABLE
-    if _db_service_instance is None:
+    if _db_service_instance is None or not DB_AVAILABLE:
         try:
             svc = DatabaseService()
             test = svc.test_connection()
