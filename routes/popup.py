@@ -311,7 +311,19 @@ async def login_popup_summary(
         summary_audio_filename = f"tts_{uuid.uuid4().hex}.mp3"
         voc_audio_filename = f"tts_{uuid.uuid4().hex}.mp3"
         
-        background_tasks.add_task(generate_audio_file, text=ai.get("summary", ""), filename=summary_audio_filename)
+        # Strip HTML and CSS styles from the summary so the TTS engine speaks clean text
+        raw_html = ai.get("summary", "")
+        import re
+        clean_text = re.sub(r'<style[^>]*>.*?</style>', ' ', raw_html, flags=re.DOTALL | re.IGNORECASE)
+        clean_text = re.sub(r'<[^>]+>', ' ', clean_text)
+        import html
+        clean_text = html.unescape(clean_text)
+        clean_text = re.sub(r'\s+', ' ', clean_text).strip()
+        
+        logger.info(f"TTS Clean Summary Text: {clean_text}")
+        logger.info(f"TTS VOC Text: {voc_tts_text}")
+        
+        background_tasks.add_task(generate_audio_file, text=clean_text, filename=summary_audio_filename)
         background_tasks.add_task(generate_audio_file, text=voc_tts_text, filename=voc_audio_filename)
 
         response_data = {
