@@ -93,6 +93,8 @@ CRITICAL STYLING & INTERACTIVITY RULES:
 2. The comparison table MUST have a sleek, premium design. Add a hover effect on <tr> so they highlight when the user points at them. Use padded cells.
 3. Use HTML <details open> and <summary> tags for the customer concerns section so it is expanded by default. Make the theme names clickable summaries that expand to show deeper insights or explanations.
 4. Style key numbers or metrics (like NPS or points) as subtle "badges" using inline CSS (e.g., background-color, border-radius, padding).
+5. For ANY numeric drop, decrease, or decline, style the badge or text using a RED color (e.g., a soft red background like #ffcccc with dark red text).
+6. For ANY numeric increase, gain, or improvement, style the badge or text using a GREEN color (e.g., a soft green background like #ccffcc with dark green text).
 
 CRITICAL LOGIC RULES FOR NARRATIVE:
 1. Your tone and concluding sentence MUST match the actual data trend. If overall NPS has declined, the conclusion must warn about attrition risk or the need for action, rather than using blanket positive phrases like "recovery momentum". However, you MUST still highlight specific bright spots (like the top improving regions or touchpoints) to show the positive impact of what is working well.

@@ -261,6 +261,19 @@ async def login_popup_summary(
         
         # Only include VOCs that belong to the Top 4 themes we established earlier
         top_4_theme_names = [issue["issue"] for issue in critical_issues[:4]]
+        theme_rank = {name: idx for idx, name in enumerate(top_4_theme_names)}
+        
+        # Sort raw_vocs by churn_intent and severity_score, but MOST importantly prioritize by the theme's rank!
+        # -theme_rank ensures that theme rank 0 (the #1 biggest issue) comes before theme rank 1, etc.
+        raw_vocs = sorted(
+            raw_vocs, 
+            key=lambda x: (
+                x.get("churn_intent", 0), 
+                x.get("severity_score", 0), 
+                -theme_rank.get(x.get("theme", "Unknown"), 999)
+            ), 
+            reverse=True
+        )
         
         for r in raw_vocs:
             if r.get("verbatim") and r.get("theme") in top_4_theme_names and len(top_alert_voc) < 5:
