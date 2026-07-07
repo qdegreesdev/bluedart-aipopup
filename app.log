@@ -1190,3 +1190,802 @@
 2026-07-02 17:32:16.470 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_c0d5c5bbdfac4e47a6b4a721db541886.mp3
 2026-07-02 17:32:16.471 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_d94ebdf287834e5eb03d47f9f841d142.mp3
 2026-07-02 17:32:16.472 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_dbefbd69543e407b97f1dd5cd1e18d21.mp3
+2026-07-06 09:52:11.210 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-07-06 09:52:11.232 | INFO     | logging:callHandlers:1737 - Started reloader process [5720] using StatReload
+2026-07-06 09:52:13.353 | INFO     | logging:callHandlers:1737 - Started server process [20552]
+2026-07-06 09:52:13.354 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 09:52:13.355 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 09:52:15.160 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 09:52:15.160 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 09:52:15.162 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 09:52:19.727 | INFO     | logging:callHandlers:1737 - 127.0.0.1:51116 - "GET / HTTP/1.1" 200
+2026-07-06 09:52:19.766 | INFO     | logging:callHandlers:1737 - 127.0.0.1:51116 - "GET /favicon.ico HTTP/1.1" 404
+2026-07-06 09:52:25.611 | INFO     | logging:callHandlers:1737 - 127.0.0.1:51119 - "GET /docs HTTP/1.1" 200
+2026-07-06 09:52:26.483 | INFO     | logging:callHandlers:1737 - 127.0.0.1:51119 - "GET /openapi.json HTTP/1.1" 200
+2026-07-06 09:53:51.092 | INFO     | services.ai_service:generate_ai_summary:150 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 09:54:08.926 | INFO     | logging:callHandlers:1737 - 127.0.0.1:51133 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 11:55:06.630 | INFO     | services.ai_service:generate_ai_summary:150 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 11:55:23.238 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54096 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 11:55:23.243 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_0c3a54a7031044adb69c65466588f287.mp3
+2026-07-06 11:55:23.244 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_9ad1021bec224048acaa65cda43dc73e.mp3
+2026-07-06 11:55:23.245 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_d78f9b0537054955ba6c0036185e6f0c.mp3
+2026-07-06 11:55:23.245 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_eccc90b61c5541f0a1b72a461c1ca4cb.mp3
+2026-07-06 11:59:45.748 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-07-06 11:59:45.840 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 11:59:45.949 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 11:59:45.952 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 11:59:45.954 | INFO     | logging:callHandlers:1737 - Finished server process [20552]
+2026-07-06 11:59:48.638 | INFO     | logging:callHandlers:1737 - Started server process [8284]
+2026-07-06 11:59:48.639 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 11:59:48.640 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 11:59:49.385 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 11:59:49.387 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 11:59:49.388 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 12:00:09.572 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54188 - "POST /clear-cache HTTP/1.1" 404
+2026-07-06 12:01:50.575 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54204 - "POST /api/v1/clear-cache HTTP/1.1" 404
+2026-07-06 12:01:52.611 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54206 - "POST /api/v1/login-popup-summary HTTP/1.1" 404
+2026-07-06 12:02:14.353 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54209 - "POST /api/clear-cache HTTP/1.1" 200
+2026-07-06 12:03:13.651 | INFO     | services.ai_service:generate_ai_summary:150 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 12:03:27.132 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54211 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 12:04:05.944 | INFO     | services.ai_service:generate_ai_summary:150 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 12:04:20.015 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54224 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 12:04:38.420 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'scratch\check_voc.py'. Reloading...
+2026-07-06 12:04:38.432 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 12:04:38.541 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 12:04:38.542 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 12:04:38.543 | INFO     | logging:callHandlers:1737 - Finished server process [8284]
+2026-07-06 12:04:40.670 | INFO     | logging:callHandlers:1737 - Started server process [21888]
+2026-07-06 12:04:40.671 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 12:04:40.672 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 12:04:41.472 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 12:04:41.473 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 12:04:41.474 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 12:05:54.253 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'scratch\check_voc.py'. Reloading...
+2026-07-06 12:05:54.274 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 12:05:54.383 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 12:05:54.385 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 12:05:54.386 | INFO     | logging:callHandlers:1737 - Finished server process [21888]
+2026-07-06 12:05:56.479 | INFO     | logging:callHandlers:1737 - Started server process [1652]
+2026-07-06 12:05:56.480 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 12:05:56.481 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 12:05:57.426 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 12:05:57.427 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 12:05:57.428 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 12:08:13.938 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-07-06 12:08:14.045 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 12:08:14.155 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 12:08:14.157 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 12:08:14.159 | INFO     | logging:callHandlers:1737 - Finished server process [1652]
+2026-07-06 12:08:16.191 | INFO     | logging:callHandlers:1737 - Started server process [19240]
+2026-07-06 12:08:16.192 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 12:08:16.193 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 12:08:16.990 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 12:08:16.991 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 12:08:16.991 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 12:08:38.479 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54309 - "POST /api/clear-cache HTTP/1.1" 200
+2026-07-06 12:09:30.302 | INFO     | services.ai_service:generate_ai_summary:150 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 12:09:35.073 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54329 - "POST /api/clear-cache HTTP/1.1" 200
+2026-07-06 12:09:50.066 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54311 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 12:10:35.995 | INFO     | services.ai_service:generate_ai_summary:150 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 12:10:51.925 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54331 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 12:33:55.558 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-06 12:33:55.659 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 12:33:55.765 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 12:33:55.768 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 12:33:55.770 | INFO     | logging:callHandlers:1737 - Finished server process [19240]
+2026-07-06 12:33:58.375 | INFO     | logging:callHandlers:1737 - Started server process [18456]
+2026-07-06 12:33:58.376 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 12:33:58.377 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 12:34:00.038 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 12:34:00.039 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 12:34:00.041 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 12:34:08.819 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54738 - "POST /api/clear-cache HTTP/1.1" 200
+2026-07-06 12:34:55.877 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 12:34:55.980 | INFO     | logging:callHandlers:1737 - Waiting for connections to close. (CTRL+C to force quit)
+2026-07-06 12:35:07.826 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 12:35:25.149 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54742 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 12:35:25.153 | INFO     | logging:callHandlers:1737 - Finished server process [18456]
+2026-07-06 12:35:25.155 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_5789f6ee92c140ae9eb4a38d73a3a2c1.mp3
+2026-07-06 12:35:25.157 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_70b98259e12c4149828e7137f16f38ef.mp3
+2026-07-06 12:35:25.159 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_730f854fcbce489c907a0ea88b157525.mp3
+2026-07-06 12:35:25.160 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_8a7d21710009403cb487b8156acf2bfe.mp3
+2026-07-06 12:35:25.161 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_be385b2ec9c04ab5b8b42e9e2c90545d.mp3
+2026-07-06 12:35:25.162 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_ffb89a7a88a0491faaa5d6dc632cda6d.mp3
+2026-07-06 12:35:25.188 | ERROR    | logging:callHandlers:1737 - Traceback (most recent call last):
+  File "C:\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    ~~~~~~~~~~~^^
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\server.py", line 78, in serve
+    with self.capture_signals():
+         ~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\contextlib.py", line 148, in __exit__
+    next(self.gen)
+    ~~~~^^^^^^^^^^
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\server.py", line 339, in capture_signals
+    signal.raise_signal(captured_signal)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\asyncio\runners.py", line 166, in _on_sigint
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\routing.py", line 645, in lifespan
+    await receive()
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\asyncio\queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2026-07-06 12:35:25.194 | ERROR    | logging:callHandlers:1737 - Exception in ASGI application
+
+Traceback (most recent call last):
+
+  File "C:\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x00000252FFAC4400>
+           │      └ <function Runner.run at 0x00000252FEE29220>
+           └ <asyncio.runners.Runner object at 0x00000252FF9FB0E0>
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task finished name='Task-1' coro=<Server.serve() done, defined at D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\si...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x00000252FEE3D590>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x00000252FF9FB0E0>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x00000252FEE3D4E0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000252FEE3F5E0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x00000252FD6331C0>
+    └ <Handle Task.task_wakeup()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\server.py", line 78, in serve
+    with self.capture_signals():
+         │    └ <function Server.capture_signals at 0x00000252FFA8D7A0>
+         └ <uvicorn.server.Server object at 0x00000252FF9FA270>
+  File "C:\Python314\Lib\contextlib.py", line 148, in __exit__
+    next(self.gen)
+         │    └ <generator object Server.capture_signals at 0x00000252FFAF8E10>
+         └ <contextlib._GeneratorContextManager object at 0x00000252FF9FB620>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\server.py", line 339, in capture_signals
+    signal.raise_signal(captured_signal)
+    │      │            └ 2
+    │      └ <built-in function raise_signal>
+    └ <module 'signal' from 'C:\\Python314\\Lib\\signal.py'>
+  File "C:\Python314\Lib\asyncio\runners.py", line 166, in _on_sigint
+    raise KeyboardInterrupt()
+
+KeyboardInterrupt
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Python314\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 284
+               │     └ 3
+               └ <function _main at 0x00000252FCFF81A0>
+  File "C:\Python314\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 284
+           │    └ <function BaseProcess._bootstrap at 0x00000252FCEAE1F0>
+           └ <SpawnProcess name='SpawnProcess-6' parent=5720 started>
+  File "C:\Python314\Lib\multiprocessing\process.py", line 320, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x00000252FCEAD590>
+    └ <SpawnProcess name='SpawnProcess-6' parent=5720 started>
+  File "C:\Python314\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x00000252FF9FA120>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-6' parent=5720 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-6' parent=5720 started>
+    │    └ <function subprocess_started at 0x00000252FFA8EE50>
+    └ <SpawnProcess name='SpawnProcess-6' parent=5720 started>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket [closed] fd=-1, family=2, type=1, proto=6>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x00000252FF9FA270>>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x00000252FFA2D640>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x00000252FF9FA120>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x00000252FF9FA270>
+           │           │    │             └ [<socket.socket [closed] fd=-1, family=2, type=1, proto=6>]
+           │           │    └ <function Server.serve at 0x00000252FFA8CBF0>
+           │           └ <uvicorn.server.Server object at 0x00000252FF9FA270>
+           └ <function run at 0x00000252FEE28E00>
+  File "C:\Python314\Lib\asyncio\runners.py", line 203, in run
+    with Runner(debug=debug, loop_factory=loop_factory) as runner:
+         │            │                   │                └ <asyncio.runners.Runner object at 0x00000252FF9FB0E0>
+         │            │                   └ <class 'asyncio.windows_events._WindowsSelectorEventLoop'>
+         │            └ None
+         └ <class 'asyncio.runners.Runner'>
+  File "C:\Python314\Lib\asyncio\runners.py", line 63, in __exit__
+    self.close()
+    │    └ <function Runner.close at 0x00000252FEE290C0>
+    └ <asyncio.runners.Runner object at 0x00000252FF9FB0E0>
+  File "C:\Python314\Lib\asyncio\runners.py", line 71, in close
+    _cancel_all_tasks(loop)
+    │                 └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <function _cancel_all_tasks at 0x00000252FEE29430>
+  File "C:\Python314\Lib\asyncio\runners.py", line 215, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+    │    │                  │     │       └ {<Task cancelling name='Task-6' coro=<RequestResponseCycle.run_asgi() running at D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_pop...
+    │    │                  │     └ <function gather at 0x00000252FEEB56F0>
+    │    │                  └ <module 'asyncio.tasks' from 'C:\\Python314\\Lib\\asyncio\\tasks.py'>
+    │    └ <function BaseEventLoop.run_until_complete at 0x00000252FEE3D590>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 706, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x00000252FEE3D4E0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 677, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000252FEE3F5E0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Python314\Lib\asyncio\base_events.py", line 2046, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x00000252FD6331C0>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x0000025283B14820>()>
+  File "C:\Python314\Lib\asyncio\events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x0000025283B14820>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x0000025283B14820>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x0000025283B14820>()>
+> File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 415, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x00000252830101A0>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 62, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FCE10>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x0000025282EEB770>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x00000252830101A0>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\fastapi\applications.py", line 1162, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FCE10>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\applications.py", line 90, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FCE10>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000025283010EC0>
+          └ <fastapi.applications.FastAPI object at 0x0000025282EEB770>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x00000252839B6770>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x0000025283010D70>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000025283010EC0>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\middleware\cors.py", line 88, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x00000252839B6770>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000025283010C20>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x0000025283010D70>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x00000252839B6770>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x00000252839FD090>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000025283010980>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000025283010C20>
+          └ <function wrap_app_handling_exceptions at 0x00000252804CB530>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000025283010980>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x0000025282FCAE90>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x0000025283010980>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x0000025282FCAE90>>
+          └ <fastapi.routing.APIRouter object at 0x0000025282FCAE90>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\routing.py", line 680, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function _IncludedRouter.handle at 0x00000252804FDD20>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x00000252808A92B0>, include_context=_RouterIncludeConte...
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\fastapi\routing.py", line 1609, in handle
+    await self.original_router.handle(scope, receive, send)
+          │    │               │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │    │               │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │    │               │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    │               └ <function APIRouter.handle at 0x00000252804FF270>
+          │    └ <fastapi.routing.APIRouter object at 0x00000252808A92B0>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x00000252808A92B0>, include_context=_RouterIncludeConte...
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\fastapi\routing.py", line 2047, in handle
+    await included_router._handle_selected(scope, receive, send)
+          │               │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │               │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │               │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │               └ <function _IncludedRouter._handle_selected at 0x00000252804FDE80>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x00000252808A92B0>, include_context=_RouterIncludeConte...
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\fastapi\routing.py", line 1629, in _handle_selected
+    await original_route.handle(scope, receive, send)
+          │              │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │              │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │              │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │              └ <function APIRoute.handle at 0x00000252804FC0F0>
+          └ APIRoute(path='/login-popup-summary', name='login_popup_summary', methods=['POST'])
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\fastapi\routing.py", line 1218, in handle
+    await app(scope, receive, send)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app at 0x00000252839B7740>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\fastapi\routing.py", line 143, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7480>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x00000252839DC8A0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x00000252839B78A0>
+          └ <function wrap_app_handling_exceptions at 0x00000252804CB530>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7B60>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x00000252839B78A0>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\fastapi\routing.py", line 130, in app
+    await response(scope, receive, send)
+          │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x00000252839B7B60>
+          │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.h11_impl.RequestResponseCycle object at 0x00000252839FC...
+          │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <starlette.responses.JSONResponse object at 0x00000252839FF250>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\responses.py", line 170, in __call__
+    await self.background()
+          │    └ <fastapi.background.BackgroundTasks object at 0x0000025283010830>
+          └ <starlette.responses.JSONResponse object at 0x00000252839FF250>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\background.py", line 36, in __call__
+    await task()
+          └ <starlette.background.BackgroundTask object at 0x0000025283010AD0>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\starlette\background.py", line 21, in __call__
+    await self.func(*self.args, **self.kwargs)
+          │    │     │    │       │    └ {'text': "<style>\n  table {\n    width: 100%;\n    border-collapse: collapse;\n    margin: 20px 0;\n    box-shadow: 0 2px 10...
+          │    │     │    │       └ <starlette.background.BackgroundTask object at 0x0000025283010AD0>
+          │    │     │    └ ()
+          │    │     └ <starlette.background.BackgroundTask object at 0x0000025283010AD0>
+          │    └ <function generate_audio_file at 0x00000252828B7C10>
+          └ <starlette.background.BackgroundTask object at 0x0000025283010AD0>
+
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\services\tts_service.py", line 85, in generate_audio_file
+    await asyncio.wait_for(communicate.save(filepath), timeout=30.0)
+          │       │        │           │    └ 'static\\audio\\tts_662727d471f3458f9976c3c76a02a51f.mp3'
+          │       │        │           └ <function Communicate.save at 0x00000252828B5900>
+          │       │        └ <edge_tts.communicate.Communicate object at 0x00000252839D9E80>
+          │       └ <function wait_for at 0x00000252FEEB4CA0>
+          └ <module 'asyncio' from 'C:\\Python314\\Lib\\asyncio\\__init__.py'>
+
+  File "C:\Python314\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+                 └ <coroutine object Communicate.save at 0x00000252838F3AC0>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\edge_tts\communicate.py", line 613, in save
+    async for message in self.stream():
+                         │    └ <function Communicate.stream at 0x00000252828B57A0>
+                         └ <edge_tts.communicate.Communicate object at 0x00000252839D9E80>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\edge_tts\communicate.py", line 588, in stream
+    async for message in self.__stream():
+                         └ <edge_tts.communicate.Communicate object at 0x00000252839D9E80>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\edge_tts\communicate.py", line 465, in __stream
+    ) as session, session.ws_connect(
+         │        │       └ <function ClientSession.ws_connect at 0x00000252827D61F0>
+         │        └ <aiohttp.client.ClientSession object at 0x00000252839D9D30>
+         └ <aiohttp.client.ClientSession object at 0x00000252839D9D30>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\aiohttp\client.py", line 1683, in __aenter__
+    self._resp: _RetType_co = await self._coro
+    │    │                          │    └ <member '_coro' of '_BaseRequestContextManager' objects>
+    │    │                          └ <aiohttp.client._BaseRequestContextManager object at 0x000002528EA107F0>
+    │    └ <member '_resp' of '_BaseRequestContextManager' objects>
+    └ <aiohttp.client._BaseRequestContextManager object at 0x000002528EA107F0>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\aiohttp\client.py", line 1244, in _ws_connect
+    resp = await self.request(
+                 │    └ <function ClientSession.request at 0x00000252827D5DD0>
+                 └ <aiohttp.client.ClientSession object at 0x00000252839D9D30>
+  File "D:\SUNIL KUMAWAT\POPUP_PROJECTS\bluedart_popup\venv\Lib\site-packages\aiohttp\client.py", line 740, in _request
+    auth = await self._loop.run_in_executor(
+                 │    │     └ <function BaseEventLoop.run_in_executor at 0x00000252FEE3DF30>
+                 │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+                 └ <aiohttp.client.ClientSession object at 0x00000252839D9D30>
+
+asyncio.exceptions.CancelledError
+2026-07-06 12:35:25.518 | INFO     | logging:callHandlers:1737 - Stopping reloader process [5720]
+2026-07-06 12:35:38.699 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-07-06 12:35:38.700 | INFO     | logging:callHandlers:1737 - Started reloader process [20776] using StatReload
+2026-07-06 12:35:40.645 | INFO     | logging:callHandlers:1737 - Started server process [6596]
+2026-07-06 12:35:40.646 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 12:35:40.647 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 12:35:42.542 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 12:35:42.543 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 12:35:42.544 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 12:36:43.629 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 12:37:03.254 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54764 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 12:42:24.917 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54847 - "POST /api/clear-cache HTTP/1.1" 200
+2026-07-06 12:43:23.606 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 12:43:35.942 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54847 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 12:43:35.948 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_0159062f94074ec99911adfeedbe3a8f.mp3
+2026-07-06 12:43:35.950 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_56f5633af92645edb036a84564d65f88.mp3
+2026-07-06 12:43:35.952 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_b1080fad876c414d845e918f3b4e16f1.mp3
+2026-07-06 12:43:35.954 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_b66addfea50c40218d3eabfdcb90ff99.mp3
+2026-07-06 12:43:51.480 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54880 - "POST /api/clear-cache HTTP/1.1" 200
+2026-07-06 12:44:42.985 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 12:44:58.370 | INFO     | logging:callHandlers:1737 - 127.0.0.1:54882 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 13:29:43.526 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-07-06 13:29:43.558 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 13:29:43.659 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 13:29:43.660 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 13:29:43.661 | INFO     | logging:callHandlers:1737 - Finished server process [6596]
+2026-07-06 13:29:46.327 | INFO     | logging:callHandlers:1737 - Started server process [6332]
+2026-07-06 13:29:46.328 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 13:29:46.329 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 13:29:47.529 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 13:29:47.530 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 13:29:47.532 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 15:31:39.979 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-07-06 15:31:40.027 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 15:31:40.157 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 15:31:40.165 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 15:31:40.168 | INFO     | logging:callHandlers:1737 - Finished server process [6332]
+2026-07-06 15:31:44.615 | INFO     | logging:callHandlers:1737 - Started server process [11304]
+2026-07-06 15:31:44.616 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 15:31:44.617 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 15:31:45.635 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 15:31:45.636 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 15:31:45.636 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 15:31:55.410 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-07-06 15:31:55.432 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 15:31:55.535 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 15:31:55.536 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 15:31:55.537 | INFO     | logging:callHandlers:1737 - Finished server process [11304]
+2026-07-06 15:31:58.406 | INFO     | logging:callHandlers:1737 - Started server process [5876]
+2026-07-06 15:31:58.407 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 15:31:58.408 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 15:31:59.271 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 15:31:59.272 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 15:31:59.272 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 15:33:04.144 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-07-06 15:33:04.184 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 15:33:04.288 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 15:33:04.289 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 15:33:04.289 | INFO     | logging:callHandlers:1737 - Finished server process [5876]
+2026-07-06 15:33:06.390 | INFO     | logging:callHandlers:1737 - Started server process [19464]
+2026-07-06 15:33:06.391 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 15:33:06.392 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 15:33:07.345 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 15:33:07.345 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 15:33:07.346 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 15:33:45.556 | INFO     | logging:callHandlers:1737 - 127.0.0.1:57405 - "POST /api/clear-cache HTTP/1.1" 200
+2026-07-06 15:34:35.901 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-06 15:34:51.437 | INFO     | routes.popup:login_popup_summary:323 - TTS Clean Summary Text: I have analyzed the changes since your last visit. Overall NPS has declined to 84.27 (down 1.33 points ). The strongest area gain is in WEST (Region) - IND (Location) - IND (Branch) with an impressive NPS of 100 (up 50 points ). However, the worst decline is seen in NORTH (Region) - GGN (Location) - GGN (Branch) , dropping to an NPS of 36.84 (down 50.66 points ). Among touchpoints, the TP6 Booking of Package Experience has shown remarkable improvement with an NPS of 45.45 (up 30.07 points ). In contrast, TP7 Sales has seen a decline to an NPS of 57.14 (down 9.53 points ). Key Customer Concerns Theme Previous Period Current Period Commitment Not Met 411 400 Churn Risk 57 52 Complaint / Service Failure 61 51 Multiple Attempts 39 26 Immediate attention is needed to address the churn risk highlighted by customer feedback. The decline in NPS signals potential attrition, urging us to enhance service reliability and responsiveness.
+2026-07-06 15:34:51.439 | INFO     | routes.popup:login_popup_summary:324 - TTS VOC Text: Here is the top customer feedback. Feedback 1: Till now my courier not delivered. Region:NORTH and Zone:GGN and Branch:GGN and Agent:RAJAT SEHRAWAT Feedback 2: As Per your commitment shipment not delivered. Region:WEST and Zone:NGP and Branch:PNQ and Agent:VISHAL GANVIR Feedback 3: Still not received this packet. Region:NORTH and Zone:CAR and Branch:CAR and Agent:GAURAV . Feedback 4: Not delivered to location and no customer support. Region:NORTH and Zone:GRY and Branch:LDH and Agent:MANPREET KAUR Feedback 5: Order is not delivered yet. Region:WEST and Zone:BHO and Branch:IND and Agent:AAMIR KHAN
+2026-07-06 15:34:51.440 | INFO     | logging:callHandlers:1737 - 127.0.0.1:57405 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 15:34:51.446 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_00eb6ee02b8044b384827b2e5b41a12b.mp3
+2026-07-06 15:34:51.447 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_2271c8bf6fe64b19ad7e3d85d136889b.mp3
+2026-07-06 15:34:51.449 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_49d92158f8fd47be859254eb8c5c81eb.mp3
+2026-07-06 15:34:51.450 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_4cb3364fdd3c472896c78ca100c58b8d.mp3
+2026-07-06 15:34:51.451 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_643b0e935e664d05a09edccd92164913.mp3
+2026-07-06 15:34:51.452 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_662727d471f3458f9976c3c76a02a51f.mp3
+2026-07-06 15:34:51.453 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_8405faf3b34442b09c4257f22130caf3.mp3
+2026-07-06 15:34:55.464 | INFO     | routes.popup:login_popup_summary:168 - Returning fully cached popup response
+2026-07-06 15:34:55.465 | INFO     | logging:callHandlers:1737 - 127.0.0.1:57426 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-06 15:40:52.928 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-07-06 15:40:52.943 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 15:40:53.059 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 15:40:53.059 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 15:40:53.060 | INFO     | logging:callHandlers:1737 - Finished server process [19464]
+2026-07-06 15:40:55.500 | INFO     | logging:callHandlers:1737 - Started server process [20288]
+2026-07-06 15:40:55.501 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-06 15:40:55.502 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-06 15:40:57.203 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-06 15:40:57.203 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-06 15:40:57.204 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-06 16:08:11.654 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-06 16:08:11.762 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-06 16:08:11.763 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-06 16:08:11.764 | INFO     | logging:callHandlers:1737 - Finished server process [20288]
+2026-07-06 16:08:11.988 | INFO     | logging:callHandlers:1737 - Stopping reloader process [20776]
+2026-07-07 11:14:53.161 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 11:15:07.184 | INFO     | routes.popup:login_popup_summary:323 - TTS Clean Summary Text: I have analyzed the changes since your last visit. Overall NPS has improved to 85.15 , up 2 points from last period. The strongest area gain is in TP6 Booking of Package Experience , which surged to an NPS of 66.67 , a remarkable increase of 48.49 points . Conversely, the worst decline is seen in WEST (Region) - PNJ (Location) - NBM (Branch) , which dropped to an NPS of 66.67 , down -28.2 points . Touchpoint performance indicates that TP10 Delivery Service remains a strong performer with an NPS of 85.21 , reflecting a steady improvement. However, customer concerns persist, particularly around commitment not met and service failures, which have seen a rise in complaints. Theme Previous Period Current Period Commitment Not Met 524 480 Complaint / Service Failure 81 82 Churn Risk 77 69 Multiple Attempts 50 44 Moving forward, addressing the critical issues highlighted will be essential to maintaining momentum and reducing churn risk.
+2026-07-07 11:15:07.184 | INFO     | routes.popup:login_popup_summary:324 - TTS VOC Text: Here is the top customer feedback. Feedback 1: Was told the  delivery will be  next day but still not delevired. Region:NORTH and Zone:LCK and Branch:LCK and Agent:ANURAG SHUKLA Feedback 2: It?s not delivered to me. Region:NORTH and Zone:JAI and Branch:GGR and Agent:TAHIR KHAN Feedback 3: Parcel is not delivered . Please deliver ASAP. Cobtact 6381386351. Region:SOUTH and Zone:CJB and Branch:CJB and Agent:MURALIDHARAN R Feedback 4: Shipments not delivered to my flat number B2-101 of Umang Premiere Apartment.. Region:WEST and Zone:XSK and Branch:PNQ and Agent:RAMCHANDRA UBHE Feedback 5: Item not delivered.It's important. Region:SOUTH and Zone:BLR and Branch:CGM and Agent:MAHESH MUCCHIGIRI
+2026-07-07 11:15:07.191 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_39bb803df797451cb2c8a3cddf51038a.mp3
+2026-07-07 11:15:07.193 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_ebfd159eccb84850a9c700251c6f84c6.mp3
+2026-07-07 11:17:43.995 | INFO     | services.ai_service:answer_user_question:379 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-07-07 11:18:32.758 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 11:18:43.777 | INFO     | routes.popup:login_popup_summary:323 - TTS Clean Summary Text: I have analyzed the changes since your last visit. Overall NPS has improved to 85.15 , up 2 points . The strongest area gain is in TP6 Booking of Package Experience , which surged by 48.49 points to an NPS of 66.67 . However, the worst decline was noted in SOUTH (Region) - SHX (Location) - GND (Branch) , dropping 33.33 points to an NPS of 66.67 . Critical customer concerns persist, particularly around commitment not met and service failures, with churn risk detected in multiple instances. The following table summarizes the key themes and their contributions: Theme Previous Period Complaints Current Period Complaints Commitment Not Met 524 480 Complaint / Service Failure 81 82 Churn Risk 77 69 Multiple Attempts 50 44 To maintain momentum, addressing the identified concerns swiftly is crucial.
+2026-07-07 11:18:43.778 | INFO     | routes.popup:login_popup_summary:324 - TTS VOC Text: Here is the top customer feedback. Feedback 1: Was told the  delivery will be  next day but still not delevired. Region:NORTH and Zone:LCK and Branch:LCK and Agent:ANURAG SHUKLA Feedback 2: It?s not delivered to me. Region:NORTH and Zone:JAI and Branch:GGR and Agent:TAHIR KHAN Feedback 3: Parcel is not delivered . Please deliver ASAP. Cobtact 6381386351. Region:SOUTH and Zone:CJB and Branch:CJB and Agent:MURALIDHARAN R Feedback 4: Shipments not delivered to my flat number B2-101 of Umang Premiere Apartment.. Region:WEST and Zone:XSK and Branch:PNQ and Agent:RAMCHANDRA UBHE Feedback 5: Item not delivered.It's important. Region:SOUTH and Zone:BLR and Branch:CGM and Agent:MAHESH MUCCHIGIRI
+2026-07-07 11:20:09.873 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-07-07 11:20:09.874 | INFO     | logging:callHandlers:1737 - Started reloader process [22204] using StatReload
+2026-07-07 11:20:11.703 | INFO     | logging:callHandlers:1737 - Started server process [14420]
+2026-07-07 11:20:11.703 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 11:20:11.704 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 11:20:13.543 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 11:20:13.544 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 11:20:13.546 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 11:20:34.168 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52034 - "GET / HTTP/1.1" 200
+2026-07-07 11:20:34.197 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52034 - "GET /favicon.ico HTTP/1.1" 404
+2026-07-07 11:20:35.129 | INFO     | services.ai_service:answer_user_question:379 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-07-07 11:20:37.621 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52034 - "GET /docs HTTP/1.1" 200
+2026-07-07 11:20:38.333 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52034 - "GET /openapi.json HTTP/1.1" 200
+2026-07-07 11:22:21.399 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 11:22:34.888 | INFO     | routes.popup:login_popup_summary:323 - TTS Clean Summary Text: I have analyzed the changes since your last visit. Overall NPS has improved to 85.01 , an increase of 1.41 points . The strongest area gain was in WEST (Region) - RJK (Location) - AHD (Branch) with an NPS of 93.33 , a remarkable increase of 60 points . However, the worst decline occurred in SOUTH (Region) - TTC (Location) - CJB (Branch) , where NPS dropped to 38.46 , a decrease of 16.09 points . Among touchpoints, TP10 Delivery Service showed consistent performance with an NPS of 85.09 , improving by 1.4 points . In contrast, TP6 Booking of Package Experience experienced a significant decline, dropping to an NPS of 0 . Theme Previous Period Complaints Current Period Complaints Commitment Not Met 218 224 Complaint / Service Failure 30 26 Churn Risk 33 25 Multiple Attempts 21 9 Churn risk remains a critical concern, highlighted by multiple complaints regarding unmet commitments. Addressing these issues will be vital to maintaining customer loyalty and enhancing overall satisfaction.
+2026-07-07 11:22:34.889 | INFO     | routes.popup:login_popup_summary:324 - TTS VOC Text: Here is the top customer feedback. Feedback 1: Till now my courier not delivered. Region:NORTH and Zone:GGN and Branch:GGN and Agent:RAJAT SEHRAWAT Feedback 2: As Per your commitment shipment not delivered. Region:WEST and Zone:NGP and Branch:PNQ and Agent:VISHAL GANVIR Feedback 3: Still not received this packet. Region:NORTH and Zone:CAR and Branch:CAR and Agent:GAURAV . Feedback 4: Not delivered to location and no customer support. Region:NORTH and Zone:GRY and Branch:LDH and Agent:MANPREET KAUR Feedback 5: Order is not delivered yet. Region:WEST and Zone:BHO and Branch:IND and Agent:AAMIR KHAN
+2026-07-07 11:22:34.890 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52037 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-07 11:41:43.794 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'routes\popup.py'. Reloading...
+2026-07-07 11:41:43.839 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 11:41:43.955 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 11:41:43.958 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 11:41:43.959 | INFO     | logging:callHandlers:1737 - Finished server process [14420]
+2026-07-07 11:41:46.426 | INFO     | logging:callHandlers:1737 - Started server process [4472]
+2026-07-07 11:41:46.427 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 11:41:46.427 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 11:41:47.529 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 11:41:47.531 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 11:41:47.532 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 11:46:16.863 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 11:46:16.944 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 11:46:17.058 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 11:46:17.060 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 11:46:17.061 | INFO     | logging:callHandlers:1737 - Finished server process [4472]
+2026-07-07 11:46:19.474 | INFO     | logging:callHandlers:1737 - Started server process [15756]
+2026-07-07 11:46:19.474 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 11:46:19.475 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 11:46:20.476 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 11:46:20.477 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 11:46:20.478 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 11:47:24.908 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 11:47:24.926 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 11:47:25.039 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 11:47:25.039 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 11:47:25.040 | INFO     | logging:callHandlers:1737 - Finished server process [15756]
+2026-07-07 11:47:27.177 | INFO     | logging:callHandlers:1737 - Started server process [17304]
+2026-07-07 11:47:27.178 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 11:47:27.179 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 11:47:28.078 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 11:47:28.079 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 11:47:28.080 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 11:51:16.728 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 11:51:34.799 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 11:51:34.916 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 11:51:34.917 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 11:51:34.917 | INFO     | logging:callHandlers:1737 - Finished server process [17304]
+2026-07-07 11:51:35.204 | INFO     | logging:callHandlers:1737 - Stopping reloader process [22204]
+2026-07-07 11:51:38.431 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_0cf9211b437649dfb09c76d7e81a72dc.mp3
+2026-07-07 11:51:38.432 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_3f7dfca557414e9783ee805a99c79b8d.mp3
+2026-07-07 11:51:38.433 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_5ee22527b84d44acb9773b4fa5b3a542.mp3
+2026-07-07 11:51:38.434 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_759fe264e5814f368ac9752d67948c5e.mp3
+2026-07-07 11:52:06.931 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-07-07 11:52:06.931 | INFO     | logging:callHandlers:1737 - Started reloader process [3628] using StatReload
+2026-07-07 11:52:08.949 | INFO     | logging:callHandlers:1737 - Started server process [13728]
+2026-07-07 11:52:08.949 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 11:52:08.950 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 11:52:10.840 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 11:52:10.840 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 11:52:10.841 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 11:53:19.460 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 11:53:31.444 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52545 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-07 11:53:31.449 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_37f234950b674734928b1ab1a1586a63.mp3
+2026-07-07 11:53:31.449 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_59334f7759f94c0691e47f54cf3acc1b.mp3
+2026-07-07 11:53:33.539 | INFO     | services.ai_service:answer_user_question:379 - Attempting QA response using OpenAI (gpt-4o-mini)...
+2026-07-07 12:07:04.850 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 12:07:04.857 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 12:07:04.958 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 12:07:04.959 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 12:07:04.961 | INFO     | logging:callHandlers:1737 - Finished server process [13728]
+2026-07-07 12:07:07.432 | INFO     | logging:callHandlers:1737 - Started server process [2764]
+2026-07-07 12:07:07.433 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 12:07:07.434 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 12:07:08.183 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 12:07:08.184 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 12:07:08.185 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 12:12:44.138 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 12:12:44.221 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 12:12:44.338 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 12:12:44.340 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 12:12:44.341 | INFO     | logging:callHandlers:1737 - Finished server process [2764]
+2026-07-07 12:12:46.337 | INFO     | logging:callHandlers:1737 - Started server process [22504]
+2026-07-07 12:12:46.338 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 12:12:46.339 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 12:12:47.935 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 12:12:47.935 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 12:12:47.936 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 12:20:50.139 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 12:20:50.145 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 12:20:50.250 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 12:20:50.251 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 12:20:50.252 | INFO     | logging:callHandlers:1737 - Finished server process [22504]
+2026-07-07 12:20:52.754 | INFO     | logging:callHandlers:1737 - Started server process [3528]
+2026-07-07 12:20:52.755 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 12:20:52.756 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 12:20:53.645 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 12:20:53.646 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 12:20:53.646 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 12:24:04.999 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 12:24:31.409 | INFO     | logging:callHandlers:1737 - 127.0.0.1:52936 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-07 12:24:31.414 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_1f2330aab52649b5bb7beb8d49790ea0.mp3
+2026-07-07 12:24:31.415 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_21068ae4797f4f499acd3b2a232121f0.mp3
+2026-07-07 12:24:31.416 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_4d1cb9d4cb7646d2a0208ae2f180a293.mp3
+2026-07-07 12:24:31.417 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_e4a67b73ddf442509f657fc2fc29806b.mp3
+2026-07-07 12:45:39.833 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 12:45:39.938 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 12:45:40.053 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 12:45:40.054 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 12:45:40.055 | INFO     | logging:callHandlers:1737 - Finished server process [3528]
+2026-07-07 12:45:42.134 | INFO     | logging:callHandlers:1737 - Started server process [12448]
+2026-07-07 12:45:42.135 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 12:45:42.135 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 12:45:42.927 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 12:45:42.928 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 12:45:42.929 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 12:46:32.945 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 12:46:33.060 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 12:46:33.062 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 12:46:33.063 | INFO     | logging:callHandlers:1737 - Finished server process [12448]
+2026-07-07 12:46:33.267 | INFO     | logging:callHandlers:1737 - Stopping reloader process [3628]
+2026-07-07 12:46:38.689 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-07-07 12:46:38.690 | INFO     | logging:callHandlers:1737 - Started reloader process [14928] using StatReload
+2026-07-07 12:46:40.605 | INFO     | logging:callHandlers:1737 - Started server process [2208]
+2026-07-07 12:46:40.605 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 12:46:40.606 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 12:46:42.307 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 12:46:42.308 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 12:46:42.309 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 12:48:08.879 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 12:48:48.890 | INFO     | logging:callHandlers:1737 - 127.0.0.1:53357 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-07 15:14:30.342 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 15:14:30.404 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 15:14:30.526 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 15:14:30.536 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 15:14:30.552 | INFO     | logging:callHandlers:1737 - Finished server process [2208]
+2026-07-07 15:14:32.813 | INFO     | logging:callHandlers:1737 - Started server process [12976]
+2026-07-07 15:14:32.814 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 15:14:32.814 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 15:14:33.611 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 15:14:33.612 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 15:14:33.612 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 15:15:31.697 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 15:15:31.720 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 15:15:31.833 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 15:15:31.835 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 15:15:31.836 | INFO     | logging:callHandlers:1737 - Finished server process [12976]
+2026-07-07 15:15:33.847 | INFO     | logging:callHandlers:1737 - Started server process [13976]
+2026-07-07 15:15:33.847 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 15:15:33.848 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 15:15:34.992 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 15:15:34.992 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 15:15:34.993 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 15:15:35.512 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 15:15:35.626 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 15:15:35.627 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 15:15:35.628 | INFO     | logging:callHandlers:1737 - Finished server process [13976]
+2026-07-07 15:15:35.839 | INFO     | logging:callHandlers:1737 - Stopping reloader process [14928]
+2026-07-07 15:15:41.030 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-07-07 15:15:41.031 | INFO     | logging:callHandlers:1737 - Started reloader process [4116] using StatReload
+2026-07-07 15:15:42.826 | INFO     | logging:callHandlers:1737 - Started server process [8316]
+2026-07-07 15:15:42.827 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 15:15:42.827 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 15:15:43.738 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 15:15:43.739 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 15:15:43.740 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 15:16:38.925 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 15:16:56.447 | INFO     | logging:callHandlers:1737 - 127.0.0.1:55594 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-07 15:16:56.452 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_03b5edadf43941e9b4501d852952c6b9.mp3
+2026-07-07 15:16:56.453 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_20f4bd3df51d47a2a71e4f664e60a1e3.mp3
+2026-07-07 15:16:56.454 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_d10302b0e30343ea8b6bd2eee5aebc74.mp3
+2026-07-07 15:16:56.455 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_de225c601d754e54bcdf447b0acba558.mp3
+2026-07-07 16:40:10.483 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 16:40:10.601 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 16:40:10.607 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 16:40:10.618 | INFO     | logging:callHandlers:1737 - Finished server process [8316]
+2026-07-07 16:40:11.034 | INFO     | logging:callHandlers:1737 - Stopping reloader process [4116]
+2026-07-07 16:52:13.227 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-07-07 16:52:13.228 | INFO     | logging:callHandlers:1737 - Started reloader process [15348] using StatReload
+2026-07-07 16:52:15.215 | INFO     | logging:callHandlers:1737 - Started server process [9840]
+2026-07-07 16:52:15.216 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 16:52:15.216 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 16:52:17.129 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 16:52:17.130 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 16:52:17.131 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 16:52:29.789 | INFO     | logging:callHandlers:1737 - 127.0.0.1:57187 - "GET /docs HTTP/1.1" 200
+2026-07-07 16:52:29.956 | INFO     | logging:callHandlers:1737 - 127.0.0.1:57187 - "GET /openapi.json HTTP/1.1" 200
+2026-07-07 16:53:37.667 | INFO     | services.ai_service:generate_ai_summary:152 - Attempting summary generation using OpenAI (gpt-4o-mini)...
+2026-07-07 16:53:53.192 | INFO     | logging:callHandlers:1737 - 127.0.0.1:57188 - "POST /api/login-popup-summary HTTP/1.1" 200
+2026-07-07 16:53:53.197 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_2b205d664ec547bcb5ebde0017297ecf.mp3
+2026-07-07 16:53:53.198 | INFO     | services.tts_service:cleanup_old_audio_files:61 - Cleaned up old audio file: static\audio\tts_484e44493cf14e4baf3511951d77bdb7.mp3
+2026-07-07 17:08:34.566 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 17:08:34.651 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 17:08:34.767 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 17:08:34.769 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 17:08:34.770 | INFO     | logging:callHandlers:1737 - Finished server process [9840]
+2026-07-07 17:08:37.190 | INFO     | logging:callHandlers:1737 - Started server process [21232]
+2026-07-07 17:08:37.191 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 17:08:37.192 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 17:08:38.125 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 17:08:38.126 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 17:08:38.126 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 17:09:19.889 | WARNING  | logging:callHandlers:1737 - StatReload detected changes in 'services\ai_service.py'. Reloading...
+2026-07-07 17:09:19.909 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 17:09:20.011 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 17:09:20.012 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 17:09:20.014 | INFO     | logging:callHandlers:1737 - Finished server process [21232]
+2026-07-07 17:09:22.370 | INFO     | logging:callHandlers:1737 - Started server process [21752]
+2026-07-07 17:09:22.370 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 17:09:22.371 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 17:09:24.132 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 17:09:24.134 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 17:09:24.135 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 17:09:24.590 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 17:09:24.704 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 17:09:24.707 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 17:09:24.708 | INFO     | logging:callHandlers:1737 - Finished server process [21752]
+2026-07-07 17:09:24.900 | INFO     | logging:callHandlers:1737 - Stopping reloader process [15348]
+2026-07-07 17:09:31.872 | INFO     | logging:callHandlers:1737 - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2026-07-07 17:09:31.872 | INFO     | logging:callHandlers:1737 - Started reloader process [6388] using StatReload
+2026-07-07 17:09:33.676 | INFO     | logging:callHandlers:1737 - Started server process [21136]
+2026-07-07 17:09:33.676 | INFO     | logging:callHandlers:1737 - Waiting for application startup.
+2026-07-07 17:09:33.677 | INFO     | main:startup:62 - 🚀 BlueDart Popup API starting up...
+2026-07-07 17:09:35.189 | INFO     | main:startup:65 - ✅ Database pre-warmed successfully
+2026-07-07 17:09:35.190 | INFO     | main:startup:70 - 🌐 API is available at: http://127.0.0.1:8000/
+2026-07-07 17:09:35.190 | INFO     | logging:callHandlers:1737 - Application startup complete.
+2026-07-07 17:13:15.588 | INFO     | logging:callHandlers:1737 - Shutting down
+2026-07-07 17:13:15.698 | INFO     | logging:callHandlers:1737 - Waiting for application shutdown.
+2026-07-07 17:13:15.700 | INFO     | logging:callHandlers:1737 - Application shutdown complete.
+2026-07-07 17:13:15.702 | INFO     | logging:callHandlers:1737 - Finished server process [21136]
+2026-07-07 17:13:15.900 | INFO     | logging:callHandlers:1737 - Stopping reloader process [6388]

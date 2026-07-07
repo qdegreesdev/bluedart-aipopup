@@ -32,7 +32,7 @@ def generate_ai_summary(nps_data: dict, demographics: list, critical_issues: lis
         return _fallback_summary(nps_data, demographics, critical_issues, survey_comparison, last_login_label, current_login_dt, html_format)
 
     try:
-        valid_demos = [d for d in demographics if d.get("type", "").lower() == "city" and d.get("responses", 0) > 10]
+        valid_demos = [d for d in demographics if d.get("type", "").lower() == "city" and d.get("responses", 0) >= 20]
         # Modify the 'type' to say 'Branch' for clearer display if it is 'City'
         for d in valid_demos:
             if d.get("type") == "City":
@@ -86,13 +86,13 @@ def generate_ai_summary(nps_data: dict, demographics: list, critical_issues: lis
         if html_format:
             html_instruction = """You MUST format the summary using clean HTML. 
 If there is no change in NPS and no significant data, output a simple message like: <p>I have analyzed the changes since your last visit.</p><p>Overall NPS remains steady at <strong>[NPS]</strong>.</p>
-Otherwise, provide a narrative summary wrapped in <p> tags instead of bullet points. Use <strong> tags for key metrics and area names.
+Otherwise, provide a narrative summary wrapped in <p> tags instead of bullet points. You MUST use standard <strong> tags (with no inline styles) to bold all area names and touchpoint names.
 
 CRITICAL STYLING & INTERACTIVITY RULES:
 1. Make the summary visually stunning and interactive. Include a <style> block at the top with modern CSS (e.g., elegant box-shadows, rounded corners, soft alternating row colors, smooth hover transitions on table rows).
 2. The comparison table MUST have a sleek, premium design. Add a hover effect on <tr> so they highlight when the user points at them. Use padded cells.
-3. Use HTML <details open> and <summary> tags for the customer concerns section so it is expanded by default. Make the theme names clickable summaries that expand to show deeper insights or explanations.
-4. Style key numbers or metrics (like NPS or points) as subtle "badges" using inline CSS (e.g., background-color, border-radius, padding).
+3. Do NOT use <details> or <summary> tags for individual themes or concerns. Present the key customer concerns EXCLUSIVELY as a single, beautifully styled HTML table. Do not repeat the concerns outside of this table.
+4. For key numeric values ONLY (like NPS or points), style them as subtle "badges" using inline CSS on a <strong> tag (e.g., <strong style="background-color: #ccffcc; border-radius: 4px; padding: 2px 6px; font-size: inherit;">100 points</strong>). You MUST explicitly include 'font-size: inherit;' so the numbers remain the same size as the surrounding text.
 5. For ANY numeric drop, decrease, or decline, style the badge or text using a RED color (e.g., a soft red background like #ffcccc with dark red text).
 6. For ANY numeric increase, gain, or improvement, style the badge or text using a GREEN color (e.g., a soft green background like #ccffcc with dark green text).
 
@@ -100,14 +100,14 @@ CRITICAL LOGIC RULES FOR NARRATIVE:
 1. Your tone and concluding sentence MUST match the actual data trend. If overall NPS has declined, the conclusion must warn about attrition risk or the need for action, rather than using blanket positive phrases like "recovery momentum". However, you MUST still highlight specific bright spots (like the top improving regions or touchpoints) to show the positive impact of what is working well.
 2. If overall NPS is improving, conclude with an encouraging statement about accelerating the positive momentum.
 3. Completely ignore touchpoints with 0 or very few responses when determining the highest change. A 100-point drop with 0 responses is just a lack of data, NOT a drastic decline.
-4. Do not use unordered lists (<ul> or <li>) for the main narrative, but you can use them inside <details> tags.
+4. Do not use unordered lists (<ul> or <li>) for the main narrative.
 5. Keep the summary short, punchy, and highly impactful. Avoid wordy, repetitive phrasing (e.g., instead of "In terms of customer concerns, several themes have emerged", just say "Key customer concerns include").
 6. Format numbers cleanly: if a decimal value ends in .0, omit the decimal entirely (e.g., use 100 instead of 100.0). Never use hyphens between a number and the word "point" (e.g., use "100 points" instead of "100-points")."""
 
         # Compile survey comparison for context (ignoring statistically insignificant ones)
         survey_comp_str = chr(10).join([
             f"- {s['name']}: NPS {s['current_nps']} (was {s['previous_nps']}, Delta: {'+' if s['delta'] >= 0 else ''}{s['delta']} pts, Responses: {s['responses']})"
-            for s in survey_comparison if s.get('responses', 0) >= 5
+            for s in survey_comparison if s.get('responses', 0) >= 10
         ])
 
         context = f"""
@@ -137,7 +137,7 @@ CRITICAL CUSTOMER ISSUES - CURRENT PERIOD (since last login):
 {chr(10).join([f"- {issue}" for issue in top_issues]) or "No critical issues flagged"}
 
 Provide JSON with:
-- "summary": 2-3 short, highly concise paragraphs in an impressive executive briefing tone. Eliminate all fluff and filler words. You MUST start the summary exactly like this: "<p>I have analyzed the changes since your last visit.</p>". Follow it with narrative paragraphs briefly describing the overall NPS movement, the strongest area gain, and the worst decline. Also, analyze the touchpoint performance data to identify the highest change and its effect on customer experience. Next, succinctly describe the top customer concerns and provide a clean, modern HTML table comparing the top themes between the Previous Period (Before Last Login) and the Current Period (Since Last Login) along with their overall contribution (number of complaints). Ensure the table uses <table>, <thead>, <tbody>, <tr>, <th>, and <td> tags. Conclude with a short forward-looking statement. If any verbatims indicate CHURN RISK, explicitly mention it. Only include areas or concerns actually present in the data. CRITICAL INSTRUCTION: You MUST write the area names exactly as formatted in the list, completely preserving the bracketed tags "(Region)" and "(Location)" inside the name. If you omit "(Region)" or "(Location)", the output will be rejected. Correct Example: "WEST (Region) - BOM (Location) - ADR (Branch) is leading the turnaround". {html_instruction}
+- "summary": 2-3 short, highly concise paragraphs in an impressive executive briefing tone. Eliminate all fluff and filler words. You MUST start the summary exactly like this: "<p>I have analyzed the changes since your last visit.</p>". Follow it with narrative paragraphs briefly describing the overall NPS movement, the strongest area gain, and the worst decline. Also, analyze the touchpoint performance data to identify and explicitly mention BOTH the best improving touchpoint AND the worst declining touchpoint, and their effect on customer experience. Next, succinctly describe the top customer concerns and provide a clean, modern HTML table comparing the top themes between the Previous Period (Before Last Login) and the Current Period (Since Last Login) along with their overall contribution (number of complaints). Ensure the table uses <table>, <thead>, <tbody>, <tr>, <th>, and <td> tags. Conclude with a short forward-looking statement. If any verbatims indicate CHURN RISK, explicitly mention it. Only include areas or concerns actually present in the data. CRITICAL INSTRUCTION: You MUST write the area names exactly as formatted in the list, completely preserving the bracketed tags "(Region)" and "(Location)" inside the name. If you omit "(Region)" or "(Location)", the output will be rejected. Correct Example: "WEST (Region) - BOM (Location) - ADR (Branch) is leading the turnaround". {html_instruction}
 - "key_points": exactly 5 bullet strings, each under 15 words
 - "critical_vocs": exactly 5 most critical verbatim quotes representing the CURRENT top themes (or all available if less than 5) with their location data, extracted from the CRITICAL CUSTOMER ISSUES - CURRENT PERIOD section. Ensure these VOCs directly align with the top themes identified in the summary. Format as an array of objects: {{"verbatim": "exact quote", "extra_info": "Label1:Value1, Label2:Value2"}}. Omit extra_info if location data is not provided.
 """
