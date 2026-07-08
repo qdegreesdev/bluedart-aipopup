@@ -320,8 +320,8 @@ async def login_popup_summary(
         clean_text = html.unescape(clean_text)
         clean_text = re.sub(r'\s+', ' ', clean_text).strip()
         
-        logger.info(f"TTS Clean Summary Text: {clean_text}")
-        logger.info(f"TTS VOC Text: {voc_tts_text}")
+        # logger.info(f"TTS Clean Summary Text: {clean_text}")
+        # logger.info(f"TTS VOC Text: {voc_tts_text}")
         
         background_tasks.add_task(generate_audio_file, text=clean_text, filename=summary_audio_filename)
         background_tasks.add_task(generate_audio_file, text=voc_tts_text, filename=voc_audio_filename)
